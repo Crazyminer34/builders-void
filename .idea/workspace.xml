@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fabric/src/main/resources/META-INF/services/dev.detpikachu.buildersvoid.platform.services.IPlatformHelper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forge/src/main/resources/META-INF/services/dev.detpikachu.buildersvoid.platform.services.IPlatformHelper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-common.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-common.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-loader.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-loader.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/examplemod/CommonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/CommonClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/examplemod/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/examplemod/mixin/MixinMinecraft.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/examplemod/platform/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/Services.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/example/examplemod/platform/services/IPlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/services/IPlatformHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/examplemod.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/buildersvoid.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/pack.mcmeta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/com/example/examplemod/ExampleMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/BuildersVoidFabric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/com/example/examplemod/mixin/MixinTitleScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/com/example/examplemod/platform/FabricPlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/platform/FabricPlatformHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/META-INF/services/com.example.examplemod.platform.services.IPlatformHelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/examplemod.fabric.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/buildersvoid.fabric.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/forge/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/com/example/examplemod/ExampleMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/BuildersVoidForge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/com/example/examplemod/mixin/MixinTitleScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/com/example/examplemod/platform/ForgePlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/platform/ForgePlatformHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/resources/META-INF/mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/META-INF/services/com.example.examplemod.platform.services.IPlatformHelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/examplemod.forge.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/resources/buildersvoid.forge.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/common">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="builders-void" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="builders-void" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="builders-void" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2wV3DZiX30Xdq58FHXDDUmeDvnh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Gradle.builders-void [build].executor": "Run",
+    "Gradle.builders-void [clean].executor": "Run",
+    "Gradle.builders-void:common [build].executor": "Run",
+    "Gradle.builders-void:common [clean].executor": "Run",
+    "Gradle.builders-void:fabric [:fabric:net.fabricmc.devlaunchinjector.Main.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "1.20.1",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.forge - Client">
+    <configuration name="forge - Client" type="Application" factoryName="Application">
+      <envs>
+        <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.forge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/clientRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/forge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="forge - Data" type="Application" factoryName="Application">
+      <envs>
+        <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.forge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/dataRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/dataRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/forge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="forge - Server" type="Application" factoryName="Application">
+      <envs>
+        <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.forge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/forge/build/moddev/serverRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/forge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="builders-void [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="builders-void [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="builders-void:common [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="builders-void:common [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/common" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="buildersvoid.fabric.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="buildersvoid.fabric.main" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.builders-void [build]" />
+        <item itemvalue="Gradle.builders-void [clean]" />
+        <item itemvalue="Gradle.builders-void:common [build]" />
+        <item itemvalue="Gradle.builders-void:common [clean]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="" />
+      <created>1746112794940</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746112794940</updated>
+      <workItem from="1746112796351" duration="3581000" />
+      <workItem from="1746116919126" duration="982000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

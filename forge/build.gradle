@@ -19,18 +19,22 @@ legacyForge {
     if (at.exists()) {
         accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
     }
+
     parchment {
-        minecraftVersion = parchment_minecraft
+        minecraftVersion = minecraft_version
         mappingsVersion = parchment_version
     }
+
     runs {
         client {
             client()
         }
+
         data {
             data()
             programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
         }
+
         server {
             server()
         }
@@ -53,6 +57,6 @@ dependencies {
 jar {
     finalizedBy('reobfJar')
     manifest.attributes([
-            "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
+        "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
 }

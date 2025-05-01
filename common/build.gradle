@@ -5,11 +5,13 @@ plugins {
 
 legacyForge {
     mcpVersion = minecraft_version
+
     if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
         accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
     }
+
     parchment {
-        minecraftVersion = parchment_minecraft
+        minecraftVersion = minecraft_version
         mappingsVersion = parchment_version
     }
 }
@@ -24,6 +26,7 @@ configurations {
         canBeResolved = false
         canBeConsumed = true
     }
+
     commonResources {
         canBeResolved = false
         canBeConsumed = true
