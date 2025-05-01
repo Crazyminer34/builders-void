@@ -17,8 +17,12 @@ legacyForge {
 }
 
 dependencies {
-    compileOnly group: 'org.spongepowered', name: 'mixin', version: '0.8.5'
-    implementation group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.1'
+    implementation("net.blay09.mods:balm-common:${balm_version}+${minecraft_version}") {
+        exclude(group: 'net.blay09.mods', module: 'shared-bridge')
+    }
+
+    implementation 'com.google.code.findbugs:jsr305:3.0.1'
+    compileOnly 'org.spongepowered:mixin:0.8.5'
 }
 
 configurations {

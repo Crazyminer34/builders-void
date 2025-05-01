@@ -2,3 +2,91 @@ plugins {
     id 'fabric-loom' version '1.9-SNAPSHOT' apply(false)
     id 'net.neoforged.moddev.legacyforge' version '2.0.77' apply(false)
 }
+
+subprojects {
+    repositories {
+        maven {
+            url 'https://www.cursemaven.com'
+            content {
+                includeGroup 'curse.maven'
+            }
+        }
+
+        maven {
+            url 'https://maven.shedaniel.me'
+            content {
+                includeGroup 'me.shedaniel'
+                includeGroup 'me.shedaniel.cloth'
+                includeGroup 'dev.architectury'
+            }
+        }
+
+        maven {
+            url 'https://maven.blamejared.com'
+            content {
+                includeGroup 'mezz.jei'
+            }
+        }
+
+        maven {
+            url 'https://maven2.bai.lol'
+            content {
+                includeGroup 'lol.bai'
+                includeGroup 'mcp.mobius.waila'
+            }
+        }
+
+        maven {
+            url 'https://maven.terraformersmc.com'
+            content {
+                includeGroup 'com.terraformersmc'
+                includeGroup 'dev.emi'
+            }
+        }
+
+        maven {
+            url 'https://jm.gserv.me/repository/maven-public'
+            content {
+                includeGroup 'info.journeymap'
+                includeGroup 'mysticdrew'
+            }
+        }
+
+        maven {
+            url 'https://jitpack.io'
+            content {
+                includeGroup 'com.github.BlueMap-Minecraft'
+                includeGroup 'com.github.mattidragon'
+            }
+        }
+
+        maven {
+            url 'https://repo.mikeprimm.com'
+            content {
+                includeGroup 'us.dynmap'
+            }
+        }
+
+        maven {
+            url 'https://maven.siphalor.de'
+            content {
+                includeGroup 'de.siphalor'
+            }
+        }
+
+        maven {
+            url 'https://dl.cloudsmith.io/public/novamachina-mods/release/maven'
+            content {
+                includeGroup 'novamachina.novacore'
+                includeGroup 'novamachina.exnihilosequentia'
+            }
+        }
+
+        maven {
+            url 'https://maven.twelveiterations.com/repository/maven-public'
+            content {
+                includeGroup 'net.blay09.mods'
+            }
+        }
+    }
+}

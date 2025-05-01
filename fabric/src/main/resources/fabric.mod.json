@@ -30,6 +30,7 @@
         "java": ">=${java_version}",
         "minecraft": "${minecraft_version}",
         "fabric": ">=${fabric_version}",
-        "fabricloader": ">=${fabric_loader_version}"
+        "fabricloader": ">=${fabric_loader_version}",
+        "balm": ">=${balm_version}"
     }
 }

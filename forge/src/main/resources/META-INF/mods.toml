@@ -26,3 +26,10 @@ mandatory = true
 versionRange = "[${forge_version},)"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "balm"
+mandatory = true
+versionRange = "[${balm_version},)"
+ordering = "BEFORE"
+side = "BOTH"

@@ -50,8 +50,12 @@ legacyForge {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
+    modImplementation ("net.blay09.mods:balm-forge:${balm_version}+${minecraft_version}") {
+        exclude(group: 'net.blay09.mods', module: 'shared-bridge')
+    }
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5-SNAPSHOT:processor'
     compileOnly project(":common")
-    annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 }
 
 jar {
