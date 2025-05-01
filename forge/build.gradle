@@ -1,14 +1,16 @@
 plugins {
     id 'multiloader-loader'
     id 'net.neoforged.moddev.legacyforge'
+    id 'net.darkhax.curseforgegradle' version '1.0.14'
+    id 'com.modrinth.minotaur' version '2.+'
 }
 
-mixin {
-    add(sourceSets.main, "${mod_id}.refmap.json")
-
-    config("${mod_id}.mixins.json")
-    config("${mod_id}.forge.mixins.json")
-}
+//mixin {
+//    add(sourceSets.main, "${mod_id}.refmap.json")
+//
+//    config("${mod_id}.mixins.json")
+//    config("${mod_id}.forge.mixins.json")
+//}
 
 legacyForge {
     version = "${minecraft_version}-${forge_version}"
@@ -64,3 +66,36 @@ jar {
         "MixinConfigs": "${mod_id}.mixins.json,${mod_id}.forge.mixins.json"
     ])
 }
+
+task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+    dependsOn(build)
+    description = 'Publishes the Forge build to CurseForge'
+    group = 'publishing'
+
+    apiToken = findProperty('curseforge_token') ?: System.getenv('CURSEFORGE_TOKEN') ?: 'none'
+
+    def mainFile = upload(curseforge_project_id, file("${project.buildDir}/libs/${mod_id}-${project.name}-${mod_version}-${minecraft_version}.jar"))
+    mainFile.changelog = rootProject.file('CHANGELOG.md').text
+    mainFile.releaseType = release_type
+    mainFile.addGameVersion(minecraft_version)
+
+    mainFile.addRequirement('balm')
+}
+
+modrinth {
+    token = findProperty('modrinth_token') ?: System.getenv('MODRINTH_TOKEN') ?: 'none'
+
+    projectId = modrinth_project_id
+    versionType = release_type
+    versionNumber = mod_version + '+forge-' + minecraft_version
+    changelog = rootProject.file('CHANGELOG.md').text
+    uploadFile = reobfJar
+    gameVersions = [minecraft_version]
+    loaders = ['forge']
+
+    dependencies {
+        required.project 'balm'
+    }
+}
+
+tasks.modrinth.dependsOn(build)
