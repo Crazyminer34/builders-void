@@ -6,9 +6,6 @@ This is a simple mod that adds a void dimension for restriction-free building of
 
 ## Features
 
-> [!IMPORTANT]
-> The mod is currently not well-suited for multiplayer as all players teleport to the same location in the void dimension. This will be changed in a future version.
-
 - Adds an empty void dimension perfect for building large bases and factories.
 - Adds a "Void Pearl" to teleport to and from said dimension.
 - A 3x3 Obsidian platform is generated at the void dimension teleport location if there's no solid ground present.
@@ -18,6 +15,7 @@ This is a simple mod that adds a void dimension for restriction-free building of
 
 - Add the ability to craft a variation of the Void Pearl that allows other players to teleport to the same location in the void dimension.
 - Add various settings to the void dimension, such as eternal daylight, disabling mob spawning, etc.
+- Return the player to the previous dimension and position on teleporting
 
 ## Credits
 _In alphabetical order_
