@@ -1,0 +1,30 @@
+name: Label Issues
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Parse issue form
+        uses: stefanbuck/github-issue-parser@v3
+        with:
+          template-path: .github/ISSUE_TEMPLATE/bug_report.yml
+        id: issue-parser
+
+      - name: Label issue
+        uses: redhat-plumbers-in-action/advanced-issue-labeler@v3
+        with:
+          issue-form: ${{ steps.issue-parser.outputs.jsonString }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+

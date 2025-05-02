@@ -1,0 +1,16 @@
+policy:
+  - template: [bug_report.yml]
+    section:
+      - id: [minecraftVersion]
+        label:
+          - name: 1.20.1
+            keys: [1.20.1]
+
+      - id: [modLoader]
+        label:
+          - name: NeoForge
+            keys: [NeoForge]
+          - name: Forge
+            keys: [Forge]
+          - name: Fabric
+            keys: [Fabric]
