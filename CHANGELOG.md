@@ -1,3 +1,9 @@
+### 20.1.0-alpha6
+_Buttons and levers_
+- Add Cloth Config as a dependency
+- Add configuration screen
+- Make cooldown length and whether it is enabled configurable
+
 ### 20.1.0-alpha5
 _I want my friends :(_
 - Add Linked Void Pearl

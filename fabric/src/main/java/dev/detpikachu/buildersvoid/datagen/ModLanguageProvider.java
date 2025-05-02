@@ -14,14 +14,20 @@ public class ModLanguageProvider extends FabricLanguageProvider {
     }
 
     @Override
-    public void generateTranslations(TranslationBuilder translationBuilder) {
+    public void generateTranslations(TranslationBuilder t) {
 
-        translationBuilder.add(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ModItems.TAB.getIdentifier()), "Builder's Void");
-        translationBuilder.add(ModItems.VOID_PEARL, "Void Pearl");
-        translationBuilder.add(ModItems.LINKED_VOID_PEARL, "Linked Void Pearl");
+        t.add(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ModItems.TAB.getIdentifier()), "Builder's Void");
+        t.add(ModItems.VOID_PEARL, "Void Pearl");
+        t.add(ModItems.LINKED_VOID_PEARL, "Linked Void Pearl");
 
-        translationBuilder.add("tooltip.buildersvoid.void_pearl.usage", "§6Right-Click§r to teleport to and from §6your§r base the Void dimension");
-        translationBuilder.add("tooltip.buildersvoid.linked_void_pearl.usage.unbound", "§6Shift + Right Click§r to bind this Linked Void Pearl to your Void base");
-        translationBuilder.add("tooltip.buildersvoid.linked_void_pearl.usage.bound", "§6Right-Click§r to teleport to and from §6%s§r's base in the Void dimension");
+        t.add("tooltip.buildersvoid.void_pearl.usage", "§6Right-Click§r to teleport to and from §6your§r base the Void dimension");
+        t.add("tooltip.buildersvoid.linked_void_pearl.usage.unbound", "§6Shift + Right Click§r to bind this Linked Void Pearl to your Void base");
+        t.add("tooltip.buildersvoid.linked_void_pearl.usage.bound", "§6Right-Click§r to teleport to and from §6%s§r's base in the Void dimension");
+
+        t.add("config.buildersvoid.title", "Builder's Void");
+        t.add("config.buildersvoid.enableCooldown", "Enable Void Pearl Cooldown");
+        t.add("config.buildersvoid.enableCooldown.tooltip", "Enables a cooldown when using any of the Void Pearl variants");
+        t.add("config.buildersvoid.cooldown", "Void Pearl Cooldown Length");
+        t.add("config.buildersvoid.cooldown.tooltip", "Void Pearl usage cooldown length, in ticks");
     }
 }

@@ -52,12 +52,14 @@ legacyForge {
 sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
+    modImplementation "net.blay09.mods:balm-common:${balm_version}+${minecraft_version}"
     modImplementation ("net.blay09.mods:balm-forge:${balm_version}+${minecraft_version}") {
         exclude(group: 'net.blay09.mods', module: 'shared-bridge')
     }
 
     // Dependencies
-    modRuntimeOnly "maven.modrinth:yeetus-experimentus:${yeetus_version}-forge"
+    modImplementation "me.shedaniel.cloth:cloth-config-forge:${cloth_config_version}"
+    modRuntimeOnly "maven.modrinth:yeetus-experimentus:${yeetus_experimentus_version}-forge"
 
     // Dev dependencies
     modRuntimeOnly "mezz.jei:jei-${minecraft_version}-forge:${jei_version}"
@@ -87,6 +89,7 @@ task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
     mainFile.addModLoader('Forge')
 
     mainFile.addRequirement('balm')
+    mainFile.addRequirement('cloth-config')
     mainFile.addRequirement('yeetusexperimentus')
 }
 
@@ -103,6 +106,7 @@ modrinth {
 
     dependencies {
         required.project 'balm'
+        required.project 'cloth-config'
         required.project 'yeetus-experimentus'
     }
 }

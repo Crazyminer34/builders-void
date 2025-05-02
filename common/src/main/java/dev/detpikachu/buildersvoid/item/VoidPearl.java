@@ -1,8 +1,10 @@
 package dev.detpikachu.buildersvoid.item;
 
+import dev.detpikachu.buildersvoid.ModConfig;
 import dev.detpikachu.buildersvoid.ModConstants;
 import dev.detpikachu.buildersvoid.state.VoidState;
 import dev.detpikachu.buildersvoid.state.containers.ReturnPosition;
+import net.blay09.mods.balm.api.Balm;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -51,7 +53,7 @@ public class VoidPearl extends Item {
 
         if (level.isClientSide) {
 
-            player.getCooldowns().addCooldown(this, 100);
+            addCooldown(player);
             return InteractionResultHolder.pass(player.getItemInHand(usedHand));
         }
 
@@ -167,8 +169,7 @@ public class VoidPearl extends Item {
         }
 
         // Teleport the player to the middle of the platform
-        serverPlayer.teleportTo(voidDimension, basePos.getX() + 1.5, basePos.getY() + 1, basePos.getZ() + 1.5, playerRotation.y, playerRotation.x);
-        serverPlayer.getCooldowns().addCooldown(this, 100);
+        teleportPlayer(serverPlayer, voidDimension, basePos.getX() + 1.5, basePos.getY() + 1, basePos.getZ() + 1.5, playerRotation);
 
         // Remove force load on the chunk if it was necessary
         if (unforceChunk) {
@@ -194,8 +195,7 @@ public class VoidPearl extends Item {
             ResourceKey<Level> returnDimensionKey = ResourceKey.create(Registries.DIMENSION, returnPositionObj.dimension());
             ServerLevel returnDimension = currentDimension.getServer().getLevel(returnDimensionKey);
 
-            serverPlayer.teleportTo(returnDimension, returnPosition.x, returnPosition.y, returnPosition.z, playerRotation.y, playerRotation.x);
-            serverPlayer.getCooldowns().addCooldown(this, 100);
+            teleportPlayer(serverPlayer, returnDimension, returnPosition, playerRotation);
             return;
         }
 
@@ -209,8 +209,7 @@ public class VoidPearl extends Item {
             respawnDimension = currentDimension.getServer().getLevel(respawnDimensionKey);
             BlockPos respawnPosition = respawnDimension.getSharedSpawnPos();
 
-            serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
-            serverPlayer.getCooldowns().addCooldown(this, 100);
+            teleportPlayer(serverPlayer, respawnDimension, respawnPosition, playerRotation);
             return;
         }
 
@@ -224,8 +223,36 @@ public class VoidPearl extends Item {
             respawnPosition = respawnDimension.getSharedSpawnPos();
         }
 
-        serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
-        serverPlayer.getCooldowns().addCooldown(this, 100);
+        teleportPlayer(serverPlayer, respawnDimension, respawnPosition, playerRotation);
+    }
+
+    private void teleportPlayer(ServerPlayer player, ServerLevel dimension, double x, double y, double z, Vec2 rotation) {
+
+        Vec3 position = new Vec3(x, y, z);
+        teleportPlayer(player, dimension, position, rotation);
+    }
+
+    private void teleportPlayer(ServerPlayer player, ServerLevel dimension, BlockPos position, Vec2 rotation) {
+
+        Vec3 parsedPosition = new Vec3(position.getX(), position.getY(), position.getZ());
+        teleportPlayer(player, dimension, parsedPosition, rotation);
+    }
+
+    private void teleportPlayer(ServerPlayer player, ServerLevel dimension, Vec3 position, Vec2 rotation) {
+
+        player.teleportTo(dimension, position.x, position.y, position.z, rotation.y, rotation.x);
+        addCooldown(player);
+    }
+
+    private void addCooldown(Player player) {
+
+        ModConfig config = ModConfig.getActive();
+        if (!config.enableCooldown) {
+
+            return;
+        }
+
+        player.getCooldowns().addCooldown(this, config.cooldown);
     }
 
     private Vec2 getVoidOffset(int index) {
