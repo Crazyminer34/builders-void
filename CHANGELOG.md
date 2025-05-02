@@ -1,3 +1,8 @@
+### 20.1.0-alpha4
+_Put me back!_
+- Record the player's dimension and position upon teleporting to the void dimension
+- Upon teleporting out of the void dimension, teleport the player to their previous position or to a suitable respawn location
+
 ### 20.1.0-alpha3
 _Individual voids_
 - Add persistent state attached to the void dimension

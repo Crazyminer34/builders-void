@@ -2,9 +2,11 @@ package dev.detpikachu.buildersvoid.item;
 
 import dev.detpikachu.buildersvoid.ModConstants;
 import dev.detpikachu.buildersvoid.state.VoidState;
+import dev.detpikachu.buildersvoid.state.containers.ReturnPosition;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
@@ -16,6 +18,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.storage.DimensionDataStorage;
 import net.minecraft.world.phys.Vec2;
+import net.minecraft.world.phys.Vec3;
 
 import java.util.UUID;
 
@@ -33,43 +36,82 @@ public class VoidPearl extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
+
         if (level.isClientSide) {
+
             return InteractionResultHolder.pass(player.getItemInHand(usedHand));
         }
 
-        ServerLevel serverLevel = (ServerLevel) level;
         ServerPlayer serverPlayer = (ServerPlayer) player;
-        UUID serverPlayerUUID = serverPlayer.getUUID();
-        Vec2 rotation = serverPlayer.getRotationVector();
-        if (serverLevel.dimension() == ResourceKey.create(Registries.DIMENSION, id("builders_void"))) {
+        UUID playerUUID = serverPlayer.getUUID();
+        Vec3 playerPosition = serverPlayer.position();
+        Vec2 playerRotation = serverPlayer.getRotationVector();
 
-            // If the player is currently in the void dimension, teleport to their respawn location
-            ResourceKey<Level> respawnDimensionKey = serverPlayer.getRespawnDimension();
-            ServerLevel respawnDimension = serverLevel.getServer().getLevel(respawnDimensionKey);
+        ServerLevel currentDimension = (ServerLevel) level;
+        ResourceKey<Level> voidDimensionKey = ResourceKey.create(Registries.DIMENSION, id("builders_void"));
+        ServerLevel voidDimension = currentDimension.getServer().getLevel(voidDimensionKey);
 
-            BlockPos respawnPosition = serverPlayer.getRespawnPosition();
-            if (respawnPosition == null) {
+        DimensionDataStorage voidStorage = voidDimension.getDataStorage();
+        VoidState voidState = voidStorage.computeIfAbsent(VoidState::load, VoidState::new, VoidState.FILE_NAME);
 
-                respawnPosition = serverLevel.getSharedSpawnPos();
+        if (currentDimension.dimension() == voidDimensionKey) {
+            // If the player is currently in the void dimension, teleport them to their previous location.
+            // If no such location has been recorded, teleport them to their respawn location.
+            // If their respawn location is in the void dimension, teleport them to the shared respawn position
+            // in the Overworld.
+
+            if (voidState.hasReturnPosition(playerUUID)) {
+                // If the player does have a previous position recorded, teleport them
+
+                ReturnPosition returnPositionObj = voidState.popReturnPosition(playerUUID);
+                Vec3 returnPosition = returnPositionObj.position();
+                ResourceKey<Level> returnDimensionKey = ResourceKey.create(Registries.DIMENSION, returnPositionObj.dimension());
+                ServerLevel returnDimension = currentDimension.getServer().getLevel(returnDimensionKey);
+
+                serverPlayer.teleportTo(returnDimension, returnPosition.x, returnPosition.y, returnPosition.z, playerRotation.y, playerRotation.x);
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand));
             }
 
-            serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), rotation.y, rotation.x);
-        } else {
+            // If the player does not have a previous position recorded, get their respawn dimension
+            ResourceKey<Level> respawnDimensionKey = serverPlayer.getRespawnDimension();
+            ServerLevel respawnDimension;
+            if (respawnDimensionKey == voidDimensionKey) {
 
-            // If the player is not in the void dimension, teleport them to the void dimension
-            ResourceKey<Level> voidDimensionKey = ResourceKey.create(Registries.DIMENSION, id("builders_void"));
-            ServerLevel voidDimension = serverLevel.getServer().getLevel(voidDimensionKey);
-            DimensionDataStorage voidStorage = voidDimension.getDataStorage();
-            VoidState voidState = voidStorage.computeIfAbsent(VoidState::load, VoidState::new, VoidState.FILE_NAME);
+                // If the player's respawn dimension is the void dimension, get the Overworld's shared respawn position
+                respawnDimensionKey = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("minecraft", "overworld"));
+                respawnDimension = currentDimension.getServer().getLevel(respawnDimensionKey);
+                BlockPos respawnPosition = respawnDimension.getSharedSpawnPos();
+
+                serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
+                return InteractionResultHolder.pass(player.getItemInHand(usedHand));
+            }
+
+            // If the player's respawn dimension is different from the void dimension, teleport them there
+            respawnDimension = currentDimension.getServer().getLevel(respawnDimensionKey);
+            BlockPos respawnPosition = serverPlayer.getRespawnPosition();
+
+            if (respawnPosition == null) {
+                // If the player doesn't have a respawn position, get the shared one from the respawn dimension
+
+                respawnPosition = respawnDimension.getSharedSpawnPos();
+            }
+
+            serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
+        } else {
+            // If the player is not in the void dimension, store their current position and
+            // teleport them to their appropriate location in the void dimension.
+
+            // Save the player's current position
+            voidState.pushReturnPosition(playerUUID, currentDimension, playerPosition);
 
             // Get the index of the user from the dimension data
             int index;
-            if (voidState.hasIndex(serverPlayerUUID)) {
+            if (voidState.hasIndex(playerUUID)) {
 
-                index = voidState.getIndex(serverPlayerUUID);
+                index = voidState.getIndex(playerUUID);
             } else {
 
-                index = voidState.addIndex(serverPlayerUUID);
+                index = voidState.addIndex(playerUUID);
             }
 
             // Compute the positions and offsets based on the spacing and height constants
@@ -82,7 +124,7 @@ public class VoidPearl extends Item {
             if (!voidDimension.isLoaded(basePos)) {
 
                 unforceChunk = true;
-                voidDimension.setChunkForced((int)chunkPos.x, (int)chunkPos.y, true);
+                voidDimension.setChunkForced((int) chunkPos.x, (int) chunkPos.y, true);
             }
 
             // Create a 3x3 Obsidian platform if it doesn't already exist
@@ -98,12 +140,12 @@ public class VoidPearl extends Item {
             }
 
             // Teleport the player to the middle of the platform
-            serverPlayer.teleportTo(voidDimension, basePos.getX() + 1.5, basePos.getY() + 1, basePos.getZ() + 1.5, rotation.y, rotation.x);
+            serverPlayer.teleportTo(voidDimension, basePos.getX() + 1.5, basePos.getY() + 1, basePos.getZ() + 1.5, playerRotation.y, playerRotation.x);
 
             // Remove force load on the chunk if it was necessary
             if (unforceChunk) {
 
-                voidDimension.setChunkForced((int)chunkPos.x, (int)chunkPos.y, false);
+                voidDimension.setChunkForced((int) chunkPos.x, (int) chunkPos.y, false);
             }
         }
 
