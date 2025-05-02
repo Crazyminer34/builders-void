@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "b": {
+      "item": "minecraft:black_dye"
+    },
+    "p": {
+      "item": "minecraft:ender_pearl"
+    }
+  },
+  "pattern": [
+    " b ",
+    "bpb",
+    " b "
+  ],
+  "result": {
+    "item": "buildersvoid:void_pearl"
+  },
+  "show_notification": true
+}
