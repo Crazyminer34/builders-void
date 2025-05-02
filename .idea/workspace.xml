@@ -5,20 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-loader.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-loader.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/CommonClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModCommon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/fabric.mod.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/ModForge.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/ModForge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
