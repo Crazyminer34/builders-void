@@ -84,6 +84,7 @@ task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
     mainFile.changelog = rootProject.file("changelogs/${mod_version}.md").text
     mainFile.releaseType = release_type
     mainFile.addGameVersion(minecraft_version)
+    mainFile.addModLoader('Forge')
 
     mainFile.addRequirement('balm')
     mainFile.addRequirement('yeetusexperimentus')
