@@ -13,6 +13,13 @@ subprojects {
         }
 
         maven {
+            url 'https://api.modrinth.com/maven'
+            content {
+                includeGroup 'maven.modrinth'
+            }
+        }
+
+        maven {
             url 'https://maven.shedaniel.me'
             content {
                 includeGroup 'me.shedaniel'

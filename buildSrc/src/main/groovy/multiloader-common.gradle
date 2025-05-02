@@ -106,6 +106,7 @@ processResources {
         'forge_version'             : forge_version,
         'forge_loader_version_range': forge_loader_version_range,
         'balm_version'              : balm_version,
+        'yeetus_version'            : yeetus_version,
     ]
 
     var jsonExpandProps = expandProps.collectEntries {

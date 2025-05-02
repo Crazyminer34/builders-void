@@ -56,6 +56,8 @@ dependencies {
         exclude(group: 'net.blay09.mods', module: 'shared-bridge')
     }
 
+    modImplementation "maven.modrinth:yeetus-experimentus:${yeetus_version}-forge"
+
     annotationProcessor 'org.spongepowered:mixin:0.8.5-SNAPSHOT:processor'
     compileOnly project(":common")
 }

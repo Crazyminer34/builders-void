@@ -33,3 +33,10 @@ mandatory = true
 versionRange = "[${balm_version},)"
 ordering = "BEFORE"
 side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "yeetusexperimentus"
+mandatory = true
+versionRange = "[${yeetus_version},)"
+ordering = "NONE"
+side = "CLIENT"
