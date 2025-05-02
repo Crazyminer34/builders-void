@@ -11,6 +11,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -39,6 +40,7 @@ public class VoidPearl extends Item {
 
         if (level.isClientSide) {
 
+            player.getCooldowns().addCooldown(this, 100);
             return InteractionResultHolder.pass(player.getItemInHand(usedHand));
         }
 
@@ -69,6 +71,7 @@ public class VoidPearl extends Item {
                 ServerLevel returnDimension = currentDimension.getServer().getLevel(returnDimensionKey);
 
                 serverPlayer.teleportTo(returnDimension, returnPosition.x, returnPosition.y, returnPosition.z, playerRotation.y, playerRotation.x);
+                serverPlayer.getCooldowns().addCooldown(this, 100);
                 return InteractionResultHolder.pass(player.getItemInHand(usedHand));
             }
 
@@ -83,6 +86,7 @@ public class VoidPearl extends Item {
                 BlockPos respawnPosition = respawnDimension.getSharedSpawnPos();
 
                 serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
+                serverPlayer.getCooldowns().addCooldown(this, 100);
                 return InteractionResultHolder.pass(player.getItemInHand(usedHand));
             }
 
@@ -97,6 +101,7 @@ public class VoidPearl extends Item {
             }
 
             serverPlayer.teleportTo(respawnDimension, respawnPosition.getX(), respawnPosition.getY(), respawnPosition.getZ(), playerRotation.y, playerRotation.x);
+            serverPlayer.getCooldowns().addCooldown(this, 100);
         } else {
             // If the player is not in the void dimension, store their current position and
             // teleport them to their appropriate location in the void dimension.
@@ -141,6 +146,7 @@ public class VoidPearl extends Item {
 
             // Teleport the player to the middle of the platform
             serverPlayer.teleportTo(voidDimension, basePos.getX() + 1.5, basePos.getY() + 1, basePos.getZ() + 1.5, playerRotation.y, playerRotation.x);
+            serverPlayer.getCooldowns().addCooldown(this, 100);
 
             // Remove force load on the chunk if it was necessary
             if (unforceChunk) {
