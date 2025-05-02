@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "d": {
-      "item": "minecraft:black_dye"
+      "item": "minecraft:pink_dye"
     },
     "p": {
       "item": "minecraft:ender_pearl"
@@ -15,7 +15,7 @@
     " d "
   ],
   "result": {
-    "item": "buildersvoid:void_pearl"
+    "item": "buildersvoid:linked_void_pearl"
   },
   "show_notification": true
 }

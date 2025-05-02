@@ -1,3 +1,11 @@
+### 20.1.0-alpha5
+_I want my friends :(_
+- Add Linked Void Pearl
+- Add Linked Void Pearl recipe
+- Add Void Pearl tooltip explaining usage
+- Add Linked Void Pearl tooltip explaining usage
+- Add Linked Void Pearl tooltip showing bind status
+
 ### 20.1.0-alpha4
 _Put me back!_
 - Record the player's dimension and position upon teleporting to the void dimension

@@ -15,19 +15,31 @@ import static dev.detpikachu.buildersvoid.ModConstants.id;
 public class ModRecipeProvider extends FabricRecipeProvider {
 
     public ModRecipeProvider(FabricDataOutput output) {
+
         super(output);
     }
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
+
         ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.VOID_PEARL)
-            .pattern(" b ")
-            .pattern("bpb")
-            .pattern(" b ")
-            .define('b', Items.BLACK_DYE)
+            .pattern(" d ")
+            .pattern("dpd")
+            .pattern(" d ")
+            .define('d', Items.BLACK_DYE)
             .define('p', Items.ENDER_PEARL)
             .unlockedBy(getHasName(Items.BLACK_DYE), has(Items.BLACK_DYE))
             .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
             .save(exporter, id("void_pearl"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOID_PEARL)
+            .pattern(" d ")
+            .pattern("dpd")
+            .pattern(" d ")
+            .define('d', Items.PINK_DYE)
+            .define('p', Items.ENDER_PEARL)
+            .unlockedBy(getHasName(Items.PINK_DYE), has(Items.PINK_DYE))
+            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+            .save(exporter, id("linked_void_pearl"));
     }
 }

@@ -1,4 +1,8 @@
 {
+  "item.buildersvoid.linked_void_pearl": "Linked Void Pearl",
   "item.buildersvoid.void_pearl": "Void Pearl",
-  "itemGroup.buildersvoid.buildersvoid": "Builder's Void"
+  "itemGroup.buildersvoid.buildersvoid": "Builder's Void",
+  "tooltip.buildersvoid.linked_void_pearl.usage.bound": "§6Right-Click§r to teleport to and from §6%s§r's base in the Void dimension",
+  "tooltip.buildersvoid.linked_void_pearl.usage.unbound": "§6Shift + Right Click§r to bind this Linked Void Pearl to your Void base",
+  "tooltip.buildersvoid.void_pearl.usage": "§6Right-Click§r to teleport to and from §6your§r base the Void dimension"
 }
