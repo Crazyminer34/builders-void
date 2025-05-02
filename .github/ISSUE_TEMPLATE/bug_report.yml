@@ -1,0 +1,64 @@
+name: Report a bug
+description: Report a bug you've found in Builder's Void.
+title: "[BUG] "
+labels: [bug]
+projects: []
+assignees:
+  - devpikachu
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. Filling out this information and **providing logs** will help get the issue resolved faster.
+
+        > [!WARNING]
+        > Do not download any files from comments on GitHub. Malicious users may try to trick you into installing malware.
+
+  - type: dropdown
+    id: minecraftVersion
+    attributes:
+      label: Minecraft version
+      description: What version of Minecraft are you running?
+      options:
+        - 1.20.1
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modLoader
+    attributes:
+      label: Mod loader
+      description: What mod loader are you running?
+      options:
+        - NeoForge
+        - Forge
+        - Fabric
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the issue
+      description: Be as thorough as possible and provide a step-by-step guide to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Click this field and drag your latest.log file into it to upload it. You can use also post a link to a site like [Paste.ee](https://paste.ee/), but make sure they are set to a long expiration time.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        > [!WARNING]
+        > If you are using
+        > - A custom server distribution (e.g. SpongeForge, Arclight), or
+        > - Bridging mods (e.g. Sinytra Connector, Polymer)
+        > You should test if the issue occurs without them before reporting.

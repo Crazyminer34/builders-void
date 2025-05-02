@@ -1,0 +1,32 @@
+name: Request a feature
+description: Request a feature you think would fit well in Builder's Void.
+title: "[FEATURE] "
+labels: [enhancement]
+projects: []
+assignees:
+  - devpikachu
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for requesting an issue. Try to be as specific and detailed as possible to increase the likelihood of your request being implemented.
+
+        > [!WARNING]
+        > Do not download any files from comments on GitHub. Malicious users may try to trick you into installing malware.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the desired feature
+      description: Be as thorough as possible and provide as much detail as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reasoning
+    attributes:
+      label: Why is this feature relevant
+      description: Explain how existing features don't fit your needs or how this feature could benefit users.
+    validations:
+      required: true
