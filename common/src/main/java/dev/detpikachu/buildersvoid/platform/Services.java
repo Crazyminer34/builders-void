@@ -1,6 +1,6 @@
 package dev.detpikachu.buildersvoid.platform;
 
-import dev.detpikachu.buildersvoid.Constants;
+import dev.detpikachu.buildersvoid.ModConstants;
 import dev.detpikachu.buildersvoid.platform.services.IPlatformHelper;
 
 import java.util.ServiceLoader;
@@ -24,7 +24,7 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
             .findFirst()
             .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        ModConstants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
         return loadedService;
     }
 }

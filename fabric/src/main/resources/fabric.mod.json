@@ -20,6 +20,9 @@
     "entrypoints": {
         "main": [
             "${mod_group}.${mod_id}.ModFabric"
+        ],
+        "fabric-datagen": [
+            "${mod_group}.${mod_id}.datagen.ModDataGenerator"
         ]
     },
     "mixins": [
