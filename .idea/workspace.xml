@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha2.md" beforeDir="false" afterPath="$PROJECT_DIR$/changelogs/20.1.0-alpha2.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/forge/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +120,7 @@
       <recent name="$PROJECT_DIR$/common/src/main/resources/assets/buildersvoid/textures/item" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Fabric Client (:fabric)">
+  <component name="RunManager" selected="Gradle.builders-void [build]">
     <configuration name="forge - Client" type="Application" factoryName="Application">
       <envs>
         <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
@@ -178,6 +172,28 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="builders-void [curseforge]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="curseforge" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -254,28 +270,6 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="builders-void:forge [runData]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/forge" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="runData" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="buildersvoid.fabric.main" />
       <method v="2">
@@ -297,16 +291,16 @@
       <item itemvalue="Gradle.builders-void [runData]" />
       <item itemvalue="Gradle.builders-void:fabric [build]" />
       <item itemvalue="Gradle.builders-void:fabric [runData]" />
-      <item itemvalue="Gradle.builders-void:forge [runData]" />
       <item itemvalue="Gradle.builders-void [build]" />
+      <item itemvalue="Gradle.builders-void [curseforge]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.builders-void [build]" />
+        <item itemvalue="Gradle.builders-void [curseforge]" />
         <item itemvalue="Gradle.builders-void:fabric [runData]" />
         <item itemvalue="Gradle.builders-void:fabric [build]" />
         <item itemvalue="Gradle.builders-void [runData]" />
-        <item itemvalue="Gradle.builders-void:forge [runData]" />
       </list>
     </recent_temporary>
   </component>
