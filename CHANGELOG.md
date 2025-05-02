@@ -1,3 +1,9 @@
+### 20.1.0-alpha3
+_Individual voids_
+- Add persistent state attached to the void dimension
+- For each player UUID, generate a new platform in 10000 block offsets
+- Persist each player UUID's index in the void dimension state
+
 ### 20.1.0-alpha2
 _Solitary voids_
 - Add creative mode tab
