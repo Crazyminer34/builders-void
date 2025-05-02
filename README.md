@@ -7,6 +7,7 @@
     <a href="https://www.curseforge.com/minecraft/mc-mods/builders-void" target="_blank"><img src="https://cf.way2muchnoise.eu/short_1255994_downloads.svg" alt="CurseForge Downloads Badge" /></a>
     <a href="https://www.curseforge.com/minecraft/mc-mods/builders-void" target="_blank"><img src="https://cf.way2muchnoise.eu/versions/1255994.svg" alt="CurseForge Versions Badge" /></a>
 </div>
+<br />
 
 This is a simple mod that adds a void dimension for restriction-free building of lawn bases.
 
