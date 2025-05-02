@@ -8,9 +8,9 @@ policy:
 
       - id: [modLoader]
         label:
-          - name: NeoForge
+          - name: neoforge
             keys: [NeoForge]
-          - name: Forge
+          - name: forge
             keys: [Forge]
-          - name: Fabric
+          - name: fabric
             keys: [Fabric]
