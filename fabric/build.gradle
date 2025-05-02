@@ -79,6 +79,7 @@ task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
 
     mainFile.addRequirement('fabric-api')
     mainFile.addRequirement('balm')
+    mainFile.addRequirement('yeetusexperimentus')
 }
 
 modrinth {
@@ -95,6 +96,7 @@ modrinth {
     dependencies {
         required.project 'fabric-api'
         required.project 'balm'
+        required.project 'yeetus-experimentus'
     }
 }
 

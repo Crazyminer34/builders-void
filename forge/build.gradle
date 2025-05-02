@@ -82,6 +82,7 @@ task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
     mainFile.addGameVersion(minecraft_version)
 
     mainFile.addRequirement('balm')
+    mainFile.addRequirement('yeetusexperimentus')
 }
 
 modrinth {
@@ -97,6 +98,7 @@ modrinth {
 
     dependencies {
         required.project 'balm'
+        required.project 'yeetus-experimentus'
     }
 }
 
