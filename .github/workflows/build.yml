@@ -1,11 +1,10 @@
-name: Build Common
+name: Build
 
 on:
   push:
     paths:
       - 'buildSrc/**'
       - 'common/**'
-      - 'forge/**'
   workflow_dispatch: {}
 
 jobs:
@@ -28,7 +27,7 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
 
       - name: Build
-        run: ./gradlew :forge:build
+        run: ./gradlew build
 
   dependencies:
     runs-on: ubuntu-latest
