@@ -15,7 +15,7 @@ This is a simple mod that adds a void dimension for restriction-free building of
 
 - Add the ability to craft a variation of the Void Pearl that allows other players to teleport to the same location in the void dimension.
 - Add various settings to the void dimension, such as eternal daylight, disabling mob spawning, etc.
-- Return the player to the previous dimension and position on teleporting
+- Return the player to the previous dimension and position on teleporting.
 
 ## Credits
 _In alphabetical order_
