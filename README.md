@@ -38,6 +38,8 @@ _In alphabetical order_
 
 - [BlayTheNinth for Balm](https://github.com/TwelveIterationMods/Balm)
 - [jaredlll08 for MultiLoader-Template](https://github.com/jaredlll08/MultiLoader-Template)
+- [shedaniel for Cloth Config](https://github.com/shedaniel/cloth-config)
+- [Sunekaer for Yeetus Experimentus](https://github.com/nanite/Yeetus-Experimentus)
 
 ## License
 Copyright (C) 2025 Andrei I. Hava
