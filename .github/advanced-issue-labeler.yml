@@ -3,6 +3,8 @@ policy:
     section:
       - id: [minecraftVersion]
         label:
+          - name: 1.21.1
+            keys: [1.21.1]
           - name: 1.20.1
             keys: [1.20.1]
 
