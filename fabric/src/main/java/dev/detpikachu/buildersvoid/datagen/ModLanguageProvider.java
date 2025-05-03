@@ -22,9 +22,9 @@ public class ModLanguageProvider extends FabricLanguageProvider {
         t.add("tooltip.buildersvoid.linked_void_pearl.usage.bound", "§6Right-Click§r to teleport to and from §6%s§r's base in the Void dimension");
 
         t.add("config.buildersvoid.title", "Builder's Void");
-        t.add("config.buildersvoid.enableCooldown", "Enable Void Pearl Cooldown");
+        t.add("config.buildersvoid.enableCooldown", "Enable Cooldown");
         t.add("config.buildersvoid.enableCooldown.tooltip", "Enables a cooldown when using any of the Void Pearl variants");
-        t.add("config.buildersvoid.cooldown", "Void Pearl Cooldown Length");
+        t.add("config.buildersvoid.cooldown", "Cooldown Length");
         t.add("config.buildersvoid.cooldown.tooltip", "Void Pearl usage cooldown length, in ticks");
     }
 }

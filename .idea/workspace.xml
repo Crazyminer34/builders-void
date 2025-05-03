@@ -5,32 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha7.md" beforeDir="false" afterPath="$PROJECT_DIR$/changelogs/20.1.0-alpha7.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModCommon.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModCommon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/client/ModCommonClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/client/ModCommonClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/LinkedVoidPearl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/LinkedVoidPearl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/ModItems.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/VoidPearl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/VoidPearl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ClientConfigMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ClientConfigMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ModNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ModNetwork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/Services.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/Services.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/services/IPlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/platform/services/IPlatformHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/VoidState.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/VoidState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/VoidState.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/ModState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/containers/ReturnPosition.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/containers/ReturnPosition.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/client/ModFabricClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/client/ModFabricClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModLanguageProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModLanguageProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModModelProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModModelProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModRecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModRecipeProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/interop/ModMenuInterop.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/interop/ModMenuInterop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/platform/FabricPlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/platform/FabricPlatformHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/ModForge.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/ModForge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/interop/ClothConfigInterop.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/interop/ClothConfigInterop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/platform/ForgePlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/platform/ForgePlatformHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,9 +79,6 @@
       </list>
     </option>
   </component>
-  <component name="FormatOnSaveOptions">
-    <option name="myRunOnSave" value="true" />
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -127,7 +113,7 @@
     "Gradle.builders-void:fabric [:fabric:net.fabricmc.devlaunchinjector.Main.main()].executor": "Run",
     "Gradle.builders-void:fabric [build].executor": "Run",
     "Gradle.builders-void:fabric [runData].executor": "Run",
-    "Gradle.builders-void:forge [:forge:net.neoforged.devlaunch.Main.main()].executor": "Run",
+    "Gradle.builders-void:forge [:forge:net.neoforged.devlaunch.Main.main()].executor": "Debug",
     "Gradle.builders-void:forge [runData].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -154,7 +140,7 @@
       <recent name="$PROJECT_DIR$/common/src/main/resources/assets/buildersvoid/textures/item" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.forge - Client">
+  <component name="RunManager" selected="Application.Fabric Client (:fabric)">
     <configuration name="forge - Client" type="Application" factoryName="Application">
       <envs>
         <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
@@ -356,7 +342,7 @@
       <workItem from="1746112796351" duration="3581000" />
       <workItem from="1746116919126" duration="7728000" />
       <workItem from="1746202748340" duration="10329000" />
-      <workItem from="1746263435760" duration="3129000" />
+      <workItem from="1746263435760" duration="10344000" />
     </task>
     <servers />
   </component>

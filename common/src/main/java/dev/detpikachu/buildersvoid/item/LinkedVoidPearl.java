@@ -1,7 +1,10 @@
 package dev.detpikachu.buildersvoid.item;
 
+import dev.detpikachu.buildersvoid.logic.DimensionLogic;
+import dev.detpikachu.buildersvoid.logic.TeleportLogic;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
@@ -19,20 +22,20 @@ public class LinkedVoidPearl extends VoidPearl {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-        CompoundTag tag = stack.getTag();
+        final var tag = stack.getTag();
 
         if (tag == null || !tag.contains("UUID")) {
             tooltipComponents.add(Component.translatable("tooltip.buildersvoid.linked_void_pearl.usage.unbound"));
             return;
         }
 
-        String format = Component.translatable("tooltip.buildersvoid.linked_void_pearl.usage.bound").getString();
+        final var format = Component.translatable("tooltip.buildersvoid.linked_void_pearl.usage.bound").getString();
         tooltipComponents.add(Component.literal(String.format(format, tag.getString("User"))));
     }
 
     @Override
     public boolean isFoil(ItemStack stack) {
-        CompoundTag tag = stack.getTag();
+        final var tag = stack.getTag();
 
         if (tag == null) {
             return false;
@@ -43,17 +46,17 @@ public class LinkedVoidPearl extends VoidPearl {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
-        ItemStack itemStack = player.getItemInHand(usedHand);
-        CompoundTag tag = itemStack.getTag();
+        final var itemStack = player.getItemInHand(usedHand);
+        var tag = itemStack.getTag();
 
+        // If the player is crouching, we're attempting to bind the Linked Void Pearl to them
         if (player.isCrouching()) {
-            // If the player is crouching, we're attempting to bind the Linked Void Pearl to them
             if (level.isClientSide) {
                 return InteractionResultHolder.pass(itemStack);
             }
 
+            // If it's already bound, do nothing
             if (tag != null && tag.contains("UUID")) {
-                // If it's already bound, do nothing
                 return InteractionResultHolder.pass(itemStack);
             }
 
@@ -69,7 +72,20 @@ public class LinkedVoidPearl extends VoidPearl {
         if (tag == null || !tag.contains("UUID")) {
             return InteractionResultHolder.pass(itemStack);
         }
-        
-        return super.use(level, player, usedHand);
+
+        if (level.isClientSide) {
+            addCooldown(player);
+            return InteractionResultHolder.pass(itemStack);
+        }
+
+        if (level.dimension().location().compareTo(DimensionLogic.DIMENSION_VOID) == 0) {
+            TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
+            addCooldown(player);
+            return InteractionResultHolder.pass(itemStack);
+        }
+
+        TeleportLogic.teleportIntoVoid((ServerPlayer) player, tag.getUUID("UUID"), false);
+        addCooldown(player);
+        return InteractionResultHolder.pass(itemStack);
     }
 }

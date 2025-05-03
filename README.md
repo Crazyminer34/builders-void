@@ -15,7 +15,6 @@ This is a simple mod that adds a void dimension for restriction-free building of
 > This mod is currently in Alpha, meaning that not all planned functionality is present and there may be a significant amount of bugs. Proceed with caution.
 
 ## Features
-
 - Adds an empty void dimension perfect for building large bases and factories.
 - Adds a "Void Pearl" to teleport to and from said dimension.
 - Adds a "Linked Void Pearl" that can be bound to a player's base in the void dimension and subsequently used by others to teleport there.
@@ -24,9 +23,25 @@ This is a simple mod that adds a void dimension for restriction-free building of
 - Record the player's current dimension and position when teleporting to the void and return them there when teleporting back.
 
 ## Planned Features
-
 - Add various settings to the void dimension, such as eternal daylight, disabling mob spawning, etc.
 - Add more feedback on various actions, such as binding a Linked Void Pearl.
+
+## Commands
+The mod adds a few commands to assist in debugging and administration. You can see them listed below.
+
+```
+/buildersvoid teleport <target>             Teleport to target's base in the void, if it exists.
+/buildersvoid teleport <source> <target>    Teleport source to target's base in the void, if it exists.
+```
+
+For the commands above, there exist short versions, listed below.
+
+```
+/buildersvoid    ->    /bv
+ teleport        ->     tp
+```
+
+This is to say, instead of, for example, writing `/buildersvoid teleport <target>`, you can write `/bv tp <target>`.
 
 ## Credits
 _In alphabetical order_
