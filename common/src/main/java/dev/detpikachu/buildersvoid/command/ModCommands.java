@@ -8,7 +8,9 @@ import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.arguments.selector.EntitySelector;
+import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerPlayer;
 
 import static dev.detpikachu.buildersvoid.ModConstants.id;
 
@@ -39,20 +41,41 @@ public class ModCommands {
         });
     }
 
-    private static int onTeleportTargetPlayer(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+    private static int onTeleportTargetPlayer(CommandContext<CommandSourceStack> context) {
         final var target = context.getArgument("target", EntitySelector.class);
         final var sourcePlayer = context.getSource().getPlayer();
-        final var targetPlayer = target.findSinglePlayer(context.getSource());
+        ServerPlayer targetPlayer;
+
+        try {
+            targetPlayer = target.findSinglePlayer(context.getSource());
+        } catch (CommandSyntaxException ignoredException) {
+            context.getSource().sendSystemMessage(Component.translatable("message.buildersvoid.player_not_found"));
+            return 1;
+        }
 
         TeleportLogic.teleportIntoVoid(sourcePlayer, targetPlayer.getUUID(), false);
         return 0;
     }
 
-    private static int onTeleportSourceToTarget(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+    private static int onTeleportSourceToTarget(CommandContext<CommandSourceStack> context) {
         final var source = context.getArgument("source", EntitySelector.class);
-        final var sourcePlayer = source.findSinglePlayer(context.getSource());
+        ServerPlayer sourcePlayer;
         final var target = context.getArgument("target", EntitySelector.class);
-        final var targetPlayer = target.findSinglePlayer(context.getSource());
+        ServerPlayer targetPlayer;
+
+        try {
+            sourcePlayer = source.findSinglePlayer(context.getSource());
+        } catch (CommandSyntaxException ignoredException) {
+            context.getSource().sendSystemMessage(Component.translatable("message.buildersvoid.player_not_found"));
+            return 1;
+        }
+
+        try {
+            targetPlayer = target.findSinglePlayer(context.getSource());
+        } catch (CommandSyntaxException ignoredException) {
+            context.getSource().sendSystemMessage(Component.translatable("message.buildersvoid.player_not_found"));
+            return 1;
+        }
 
         TeleportLogic.teleportIntoVoid(sourcePlayer, targetPlayer.getUUID(), false);
         return 0;

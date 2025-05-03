@@ -1,5 +1,6 @@
 package dev.detpikachu.buildersvoid.item;
 
+import dev.detpikachu.buildersvoid.logic.ComponentLogic;
 import dev.detpikachu.buildersvoid.logic.DimensionLogic;
 import dev.detpikachu.buildersvoid.logic.TeleportLogic;
 import net.minecraft.nbt.CompoundTag;
@@ -29,8 +30,7 @@ public class LinkedVoidPearl extends VoidPearl {
             return;
         }
 
-        final var format = Component.translatable("tooltip.buildersvoid.linked_void_pearl.usage.bound").getString();
-        tooltipComponents.add(Component.literal(String.format(format, tag.getString("User"))));
+        tooltipComponents.add(ComponentLogic.formatted("tooltip.buildersvoid.linked_void_pearl.usage.bound", tag.getString("User")));
     }
 
     @Override
@@ -49,43 +49,47 @@ public class LinkedVoidPearl extends VoidPearl {
         final var itemStack = player.getItemInHand(usedHand);
         var tag = itemStack.getTag();
 
-        // If the player is crouching, we're attempting to bind the Linked Void Pearl to them
+        // If the player is crouching, we're attempting to bind the pearl to them
         if (player.isCrouching()) {
-            if (level.isClientSide) {
-                return InteractionResultHolder.pass(itemStack);
-            }
-
             // If it's already bound, do nothing
             if (tag != null && tag.contains("UUID")) {
+                player.displayClientMessage(Component.translatable("message.buildersvoid.linked_void_pearl.already_bound"), true);
                 return InteractionResultHolder.pass(itemStack);
             }
 
-            tag = new CompoundTag();
-            tag.putString("User", player.getDisplayName().getString());
-            tag.putUUID("UUID", player.getUUID());
-            itemStack.setTag(tag);
+            if (!level.isClientSide) {
+                tag = new CompoundTag();
+                tag.putString("User", player.getDisplayName().getString());
+                tag.putUUID("UUID", player.getUUID());
+                itemStack.setTag(tag);
+            }
 
+            player.displayClientMessage(Component.translatable("message.buildersvoid.linked_void_pearl.bound"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
         // Make sure the pearl is bound, otherwise do nothing
         if (tag == null || !tag.contains("UUID")) {
+            player.displayClientMessage(Component.translatable("message.buildersvoid.linked_void_pearl.unbound"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
-        if (level.isClientSide) {
+        // If the player is inside the void dimension, teleport them out
+        if (player.level().dimension().location().compareTo(DimensionLogic.DIMENSION_VOID) == 0) {
+            if (!level.isClientSide) {
+                TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
+            }
             addCooldown(player);
+            player.displayClientMessage(Component.translatable("message.buildersvoid.void_pearl.teleport_out"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
-        if (level.dimension().location().compareTo(DimensionLogic.DIMENSION_VOID) == 0) {
-            TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
-            addCooldown(player);
-            return InteractionResultHolder.pass(itemStack);
+        // Otherwise teleport them into the void dimension
+        if (!level.isClientSide) {
+            TeleportLogic.teleportIntoVoid((ServerPlayer) player, tag.getUUID("UUID"), false);
         }
-
-        TeleportLogic.teleportIntoVoid((ServerPlayer) player, tag.getUUID("UUID"), false);
         addCooldown(player);
+        player.displayClientMessage(ComponentLogic.formatted("message.buildersvoid.linked_void_pearl.teleport", tag.getString("User")), true);
         return InteractionResultHolder.pass(itemStack);
     }
 }

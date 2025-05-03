@@ -31,19 +31,22 @@ public class VoidPearl extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
-        if (level.isClientSide) {
-            addCooldown(player);
-            return InteractionResultHolder.pass(player.getItemInHand(usedHand));
-        }
-
+        // If the player is inside the void dimension, teleport them out
         if (level.dimension().location().compareTo(DimensionLogic.DIMENSION_VOID) == 0) {
-            TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
+            if (!level.isClientSide) {
+                TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
+            }
             addCooldown(player);
+            player.displayClientMessage(Component.translatable("message.buildersvoid.void_pearl.teleport_out"), true);
             return InteractionResultHolder.pass(player.getItemInHand(usedHand));
         }
 
-        TeleportLogic.teleportIntoVoid((ServerPlayer) player, player.getUUID(), true);
+        // Otherwise teleport them into the void dimension
+        if (!level.isClientSide) {
+            TeleportLogic.teleportIntoVoid((ServerPlayer) player, player.getUUID(), true);
+        }
         addCooldown(player);
+        player.displayClientMessage(Component.translatable("message.buildersvoid.void_pearl.teleport_in"), true);
         return InteractionResultHolder.pass(player.getItemInHand(usedHand));
     }
 

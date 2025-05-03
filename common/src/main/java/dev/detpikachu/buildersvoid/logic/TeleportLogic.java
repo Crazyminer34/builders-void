@@ -14,7 +14,7 @@ import java.util.UUID;
 
 public class TeleportLogic {
     /**
-     * Teleport the given player to the specified player UUID's base in the Void.
+     * Teleport the given player to the specified player UUID's base in the void.
      *
      * @param source The player to teleport
      * @param target The target UUID to teleport to
@@ -74,7 +74,7 @@ public class TeleportLogic {
     }
 
     /**
-     * Teleport a player out of the Void dimension.
+     * Teleport a player out of the void dimension.
      *
      * @param player The ServerPlayer to teleport
      */

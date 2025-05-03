@@ -12,7 +12,7 @@
 This is a simple mod that adds a void dimension for restriction-free building of lawn bases.
 
 > [!CAUTION]
-> This mod is currently in Alpha, meaning that not all planned functionality is present and there may be a significant amount of bugs. Proceed with caution.
+> This mod is currently in Beta, meaning that there may be a significant amount of bugs. Please help us by reporting them using the relevant links!
 
 ## Features
 - Adds an empty void dimension perfect for building large bases and factories.
@@ -24,7 +24,6 @@ This is a simple mod that adds a void dimension for restriction-free building of
 
 ## Planned Features
 - Add various settings to the void dimension, such as eternal daylight, disabling mob spawning, etc.
-- Add more feedback on various actions, such as binding a Linked Void Pearl.
 
 ## Commands
 The mod adds a few commands to assist in debugging and administration. You can see them listed below.

@@ -12,10 +12,10 @@ public class DimensionLogic {
     public static final ResourceLocation DIMENSION_VOID = id("builders_void");
 
     /**
-     * Get the Void dimension level.
+     * Get the void dimension level.
      *
      * @param currentLevel The current level the player is in
-     * @return The Void dimension ServerLevel
+     * @return The void dimension ServerLevel
      */
     public static ServerLevel getVoidDimension(ServerLevel currentLevel) {
         return getDimension(currentLevel, DIMENSION_VOID);
@@ -44,9 +44,9 @@ public class DimensionLogic {
     }
 
     /**
-     * Get the Void dimension resource key.
+     * Get the void dimension resource key.
      *
-     * @return The Void dimension ResourceKey
+     * @return The void dimension ResourceKey
      */
     public static ResourceKey<Level> getVoidDimensionKey() {
         return getDimensionKey(DIMENSION_VOID);
