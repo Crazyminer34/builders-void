@@ -1,0 +1,101 @@
+plugins {
+    id 'multiloader-loader'
+    id 'net.neoforged.moddev'
+    id 'net.darkhax.curseforgegradle' version '1.0.14'
+    id 'com.modrinth.minotaur' version '2.+'
+}
+
+dependencies {
+    implementation "net.blay09.mods:balm-neoforge:${balm_version}+${minecraft_version}"
+
+    // Dependencies
+    implementation "me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}"
+    runtimeOnly "maven.modrinth:yeetus-experimentus:${yeetus_experimentus_version}-neoforge"
+
+    // Dev dependencies
+    runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
+
+    compileOnly project(":common")
+}
+
+neoForge {
+    version = neoforge_version
+
+    validateAccessTransformers = true
+
+    def at = project(':common').file('src/main/resources/META-INF/accesstransformer.cfg')
+    if (at.exists()) {
+        accessTransformers.from("src/main/resources/META-INF/accesstransformer.cfg")
+    }
+
+    parchment {
+        minecraftVersion = minecraft_version
+        mappingsVersion = parchment_version
+    }
+
+    runs {
+        configureEach {
+            systemProperty('neoforge.enabledGameTestNamespaces', mod_id)
+            ideName = "NeoForge ${it.name.capitalize()} (${project.path})"
+        }
+
+        client {
+            client()
+        }
+
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath()
+        }
+
+        server {
+            server()
+        }
+    }
+
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+sourceSets.main.resources.srcDir 'src/generated/resources'
+
+task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
+    dependsOn(build)
+    description = 'Publishes the Forge build to CurseForge'
+    group = 'publishing'
+
+    apiToken = findProperty('curseforge_token') ?: System.getenv('CURSEFORGE_TOKEN') ?: 'none'
+
+    def mainFile = upload(curseforge_project_id, file("${project.buildDir}/libs/${mod_id}-${project.name}-${mod_version}-${minecraft_version}.jar"))
+    mainFile.changelog = rootProject.file("changelogs/${mod_version}.md").text
+    mainFile.releaseType = release_type
+    mainFile.addGameVersion(minecraft_version)
+    mainFile.addModLoader('Forge')
+
+    mainFile.addRequirement('balm')
+    mainFile.addRequirement('cloth-config')
+    mainFile.addRequirement('yeetusexperimentus')
+}
+
+modrinth {
+    token = findProperty('modrinth_token') ?: System.getenv('MODRINTH_TOKEN') ?: 'none'
+
+    projectId = modrinth_project_id
+    versionType = release_type
+    versionNumber = mod_version + '+forge-' + minecraft_version
+    changelog = rootProject.file("changelogs/${mod_version}.md").text
+    uploadFile = jar
+    gameVersions = [minecraft_version]
+    loaders = ['forge']
+
+    dependencies {
+        required.project 'balm'
+        required.project 'cloth-config'
+        required.project 'yeetus-experimentus'
+    }
+}
+
+tasks.modrinth.dependsOn(build)

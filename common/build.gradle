@@ -1,13 +1,13 @@
 plugins {
     id 'multiloader-common'
-    id 'net.neoforged.moddev.legacyforge'
+    id 'net.neoforged.moddev'
 }
 
-legacyForge {
-    mcpVersion = minecraft_version
+neoForge {
+    neoFormVersion = "${minecraft_version}-${neoform_version}"
 
     if (file("src/main/resources/META-INF/accesstransformer.cfg").exists()) {
-        accessTransformers = ["src/main/resources/META-INF/accesstransformer.cfg"]
+        accessTransformers.from("src/main/resources/META-INF/accesstransformer.cfg")
     }
 
     parchment {
@@ -17,12 +17,11 @@ legacyForge {
 }
 
 dependencies {
-    implementation("net.blay09.mods:balm-common:${balm_version}+${minecraft_version}") {
-        exclude(group: 'net.blay09.mods', module: 'shared-bridge')
-    }
+    implementation "net.blay09.mods:balm-common:${balm_version}+${minecraft_version}"
 
-    implementation 'com.google.code.findbugs:jsr305:3.0.1'
     compileOnly 'org.spongepowered:mixin:0.8.5'
+    compileOnly 'io.github.llamalad7:mixinextras-common:0.3.5'
+    annotationProcessor 'io.github.llamalad7:mixinextras-common:0.3.5'
 }
 
 configurations {

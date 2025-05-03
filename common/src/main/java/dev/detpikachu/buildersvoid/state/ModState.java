@@ -2,9 +2,11 @@ package dev.detpikachu.buildersvoid.state;
 
 import dev.detpikachu.buildersvoid.logic.DimensionLogic;
 import dev.detpikachu.buildersvoid.state.containers.ReturnPosition;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.datafix.DataFixTypes;
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.phys.Vec3;
 
@@ -29,7 +31,7 @@ public class ModState extends SavedData {
             level = DimensionLogic.getVoidDimension(level);
         }
 
-        return level.getDataStorage().computeIfAbsent(ModState::load, ModState::new, FILE_NAME);
+        return level.getDataStorage().computeIfAbsent(new Factory<>(ModState::new, ModState::load, DataFixTypes.SAVED_DATA_RANDOM_SEQUENCES), FILE_NAME);
     }
 
     /**
@@ -38,7 +40,7 @@ public class ModState extends SavedData {
      * @param compoundTag The CompoundTag to load from
      * @return The loaded ModState
      */
-    public static ModState load(CompoundTag compoundTag) {
+    public static ModState load(CompoundTag compoundTag, HolderLookup.Provider ignoredProvider) {
         final var state = new ModState();
 
         if (compoundTag.contains("LastIndex")) {
@@ -69,7 +71,7 @@ public class ModState extends SavedData {
      * @return The saved CompoundTag
      */
     @Override
-    public CompoundTag save(CompoundTag compoundTag) {
+    public CompoundTag save(CompoundTag compoundTag, HolderLookup.Provider ignoredProvider) {
         compoundTag.putInt("LastIndex", lastIndex);
 
         final var indexesTag = new CompoundTag();

@@ -5,10 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c586c79-a5bb-43e8-b9cd-7d384fd5e5f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/advanced-issue-labeler.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/advanced-issue-labeler.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.test.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/forge/builders-void.forge.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/forge/builders-void.neoforge.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/forge/builders-void.forge.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Fabric_Server___fabric__fabric.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-common.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/groovy/multiloader-common.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha2.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha3.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha4.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha5.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha6.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-alpha7.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/changelogs/20.1.0-beta1.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/common/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/generated/resources/assets/buildersvoid/models/item/linked_void_pearl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/generated/resources/data/buildersvoid/advancements/recipes/transportation/linked_void_pearl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/generated/resources/data/buildersvoid/advancements/recipes/transportation/void_pearl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/generated/resources/data/buildersvoid/recipes/linked_void_pearl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/generated/resources/data/buildersvoid/recipes/void_pearl.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/ModConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/LinkedVoidPearl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/LinkedVoidPearl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/ModItems.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/ModItems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/VoidPearl.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/item/VoidPearl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/logic/TeleportLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/logic/TeleportLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ClientConfigMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ClientConfigMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ModNetwork.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/network/ModNetwork.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/ModState.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/dev/detpikachu/buildersvoid/state/ModState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/buildersvoid.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/buildersvoid.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/resources/pack.mcmeta" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/resources/pack.mcmeta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/ModFabric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/client/ModFabricClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/client/ModFabricClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModRecipeProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/java/dev/detpikachu/buildersvoid/datagen/ModRecipeProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fabric/src/main/resources/buildersvoid.fabric.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/fabric/src/main/resources/buildersvoid.fabric.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/ModForge.java" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/java/dev/detpikachu/buildersvoid/ModNeoForge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/interop/ClothConfigInterop.java" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/java/dev/detpikachu/buildersvoid/interop/ClothConfigInterop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/java/dev/detpikachu/buildersvoid/platform/ForgePlatformHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/java/dev/detpikachu/buildersvoid/platform/NeoForgePlatformHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/META-INF/mods.toml" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/resources/META-INF/neoforge.mods.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/META-INF/services/dev.detpikachu.buildersvoid.platform.services.IPlatformHelper" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/resources/META-INF/services/dev.detpikachu.buildersvoid.platform.services.IPlatformHelper" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/forge/src/main/resources/buildersvoid.forge.mixins.json" beforeDir="false" afterPath="$PROJECT_DIR$/neoforge/src/main/resources/buildersvoid.neoforge.mixins.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,17 +91,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="builders-void" type="f1a62948:ProjectNode" />
               </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="builders-void" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="builders-void" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
             </expand>
             <select />
           </tree_state>
@@ -70,6 +108,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="NamedScopeManager">
+    <order>
+      <scope name="Fabric sources" />
+      <scope name="Forge sources" />
+    </order>
   </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
@@ -104,11 +148,12 @@
     "Gradle.builders-void:fabric [runData].executor": "Run",
     "Gradle.builders-void:forge [:forge:net.neoforged.devlaunch.Main.main()].executor": "Run",
     "Gradle.builders-void:forge [runData].executor": "Run",
+    "Gradle.builders-void:neoforge [:neoforge:net.neoforged.devlaunch.Main.main()].executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "1.21.1",
-    "last_opened_file_path": "/home/andrei/Repos/builders-void/changelogs",
+    "last_opened_file_path": "/home/andrei/Repos/builders-void-1.20.1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -129,7 +174,37 @@
       <recent name="$PROJECT_DIR$/common/src/main/resources/assets/buildersvoid/textures/item" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Fabric Client (:fabric)">
+  <component name="RunManager" selected="Application.NeoForge Client (:neoforge)">
+    <configuration name="NeoForge Client (:neoforge)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.neoforge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/clientRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/clientRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/neoforge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/neoforge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neoforge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NeoForge Data (:neoforge)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.neoforge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/dataRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/dataRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/neoforge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/neoforge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neoforge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NeoForge Server (:neoforge)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="net.neoforged.devlaunch.Main" />
+      <module name="builders-void.neoforge.main" />
+      <option name="PROGRAM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/serverRunProgramArgs.txt" />
+      <option name="VM_PARAMETERS" value="@$PROJECT_DIR$/neoforge/build/moddev/serverRunVmArgs.txt -Dfml.modFolders=buildersvoid%%$PROJECT_DIR$/neoforge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/neoforge/build/resources/main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/neoforge/run" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="forge - Client" type="Application" factoryName="Application">
       <envs>
         <env name="MOD_CLASSES" value="buildersvoid%%$PROJECT_DIR$/forge/build/classes/java/main:buildersvoid%%$PROJECT_DIR$/forge/build/resources/main" />
@@ -191,6 +266,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="builders-void [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="builders-void [curseforge]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -203,28 +300,6 @@
         <option name="taskNames">
           <list>
             <option value="curseforge" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="builders-void [runData]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="runData" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -291,13 +366,16 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Application.NeoForge Client (:neoforge)" />
+      <item itemvalue="Application.NeoForge Data (:neoforge)" />
+      <item itemvalue="Application.NeoForge Server (:neoforge)" />
       <item itemvalue="Application.Fabric Data (:fabric)" />
       <item itemvalue="Application.Fabric Client (:fabric)" />
       <item itemvalue="Application.Fabric Server (:fabric)" />
       <item itemvalue="Application.forge - Client" />
       <item itemvalue="Application.forge - Data" />
       <item itemvalue="Application.forge - Server" />
-      <item itemvalue="Gradle.builders-void [runData]" />
+      <item itemvalue="Gradle.builders-void [clean]" />
       <item itemvalue="Gradle.builders-void:fabric [build]" />
       <item itemvalue="Gradle.builders-void:fabric [runData]" />
       <item itemvalue="Gradle.builders-void [build]" />
@@ -307,9 +385,9 @@
       <list>
         <item itemvalue="Gradle.builders-void [build]" />
         <item itemvalue="Gradle.builders-void:fabric [runData]" />
+        <item itemvalue="Gradle.builders-void [clean]" />
         <item itemvalue="Gradle.builders-void [curseforge]" />
         <item itemvalue="Gradle.builders-void:fabric [build]" />
-        <item itemvalue="Gradle.builders-void [runData]" />
       </list>
     </recent_temporary>
   </component>
@@ -333,7 +411,8 @@
       <workItem from="1746202748340" duration="10329000" />
       <workItem from="1746263435760" duration="13713000" />
       <workItem from="1746278946977" duration="1988000" />
-      <workItem from="1746288492044" duration="3715000" />
+      <workItem from="1746288492044" duration="7418000" />
+      <workItem from="1746295924266" duration="560000" />
     </task>
     <servers />
   </component>

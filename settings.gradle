@@ -3,11 +3,6 @@ pluginManagement {
         gradlePluginPortal()
 
         maven {
-            name = 'Forge'
-            url = 'https://maven.minecraftforge.net/'
-        }
-
-        maven {
             name = 'Fabric'
             url = 'https://maven.fabricmc.net/'
         }
@@ -27,4 +22,4 @@ rootProject.name = 'builders-void'
 
 include("common")
 include("fabric")
-include("forge")
+include("neoforge")

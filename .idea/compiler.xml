@@ -5,18 +5,18 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5-SNAPSHOT/98b6c982030c7e9d79d3e78b31d86b285f292146/mixin-0.8.5-SNAPSHOT-processor.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.llamalad7/mixinextras-common/0.3.5/5de895137aa0478675b6ecf7602d9652b05dc37e/mixinextras-common-0.3.5.jar" />
         </processorPath>
-        <module name="builders-void.forge.main" />
+        <module name="builders-void.common.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="21" />
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="builders-void.fabric" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/main/buildersvoid-fabric-20.1.0-beta1-1.20.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_20_1.layered+hash.1899487486-v2.main.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.20.1/loom.mappings.1_20_1.layered+hash.1899487486-v2/mappings.tiny" />
-      <module name="builders-void.fabric.main" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/main/buildersvoid-fabric-20.1.0-beta1-1.20.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_20_1.layered+hash.1899487486-v2.main.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.20.1/loom.mappings.1_20_1.layered+hash.1899487486-v2/mappings.tiny" />
-      <module name="builders-void.fabric.test" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/test/test-buildersvoid-fabric-20.1.0-beta1-1.20.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_20_1.layered+hash.1899487486-v2.test.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.20.1/loom.mappings.1_20_1.layered+hash.1899487486-v2/mappings.tiny" />
+      <module name="builders-void.fabric" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/main/buildersvoid-fabric-21.1.0-beta1-1.21.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_21_1.layered+hash.730628366-v2.main.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.21.1/loom.mappings.1_21_1.layered+hash.730628366-v2/mappings.tiny" />
+      <module name="builders-void.fabric.main" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/main/buildersvoid-fabric-21.1.0-beta1-1.21.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_21_1.layered+hash.730628366-v2.main.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.21.1/loom.mappings.1_21_1.layered+hash.730628366-v2/mappings.tiny" />
+      <module name="builders-void.fabric.test" options="-AoutRefMapFile=$PROJECT_DIR$/fabric/build/classes/java/test/test-buildersvoid-fabric-21.1.0-beta1-1.21.1-refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=$PROJECT_DIR$/fabric/build/loom-cache/mixin-map-loom.mappings.1_21_1.layered+hash.730628366-v2.test.tiny -AinMapFileNamedIntermediary=$USER_HOME$/.gradle/caches/fabric-loom/1.21.1/loom.mappings.1_21_1.layered+hash.730628366-v2/mappings.tiny" />
     </option>
   </component>
 </project>

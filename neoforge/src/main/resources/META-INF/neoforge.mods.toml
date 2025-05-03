@@ -1,0 +1,55 @@
+modLoader = "javafml"
+loaderVersion = "${neoforge_loader_version_range}"
+license = "${mod_version}"
+issueTrackerURL="${mod_issues}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_name}"
+description = '''${mod_description}'''
+logoFile = "logo.png"
+credits = "${mod_credits}"
+authors = "${mod_author}"
+displayURL="${mod_source}"
+
+[[mixins]]
+config = "${mod_id}.mixins.json"
+
+[[mixins]]
+config = "${mod_id}.neoforge.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neoforge_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "balm"
+type = "required"
+versionRange = "[${balm_version},)"
+ordering = "BEFORE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "cloth_config"
+type = "required"
+versionRange = "[${cloth_config_version},)"
+ordering = "BEFORE"
+side = "CLIENT"
+
+[[dependencies.${mod_id}]]
+modId = "yeetusexperimentus"
+type = "required"
+versionRange = "[${yeetus_experimentus_version},)"
+ordering = "NONE"
+side = "CLIENT"

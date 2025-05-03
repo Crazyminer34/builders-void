@@ -107,7 +107,7 @@ public class TeleportLogic {
             return;
         }
 
-        final var dimension = DimensionLogic.getDimension(player.serverLevel(), new ResourceLocation("minecraft", "overworld"));
+        final var dimension = DimensionLogic.getDimension(player.serverLevel(), ResourceLocation.fromNamespaceAndPath("minecraft", "overworld"));
         final var position = dimension.getSharedSpawnPos();
 
         teleport(player, dimension, position);

@@ -12,6 +12,6 @@ public class ModConstants {
     public static final int VOID_SPACING = 10000;
 
     public static ResourceLocation id(String path) {
-        return new ResourceLocation(MOD_ID, path);
+        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }

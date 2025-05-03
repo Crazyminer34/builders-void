@@ -4,8 +4,8 @@ import dev.detpikachu.buildersvoid.network.ClientConfigMessage;
 import net.blay09.mods.balm.api.Balm;
 import net.blay09.mods.balm.api.config.BalmConfig;
 import net.blay09.mods.balm.api.config.BalmConfigData;
-import net.blay09.mods.balm.api.config.Comment;
-import net.blay09.mods.balm.api.config.Config;
+import net.blay09.mods.balm.api.config.reflection.Comment;
+import net.blay09.mods.balm.api.config.reflection.Config;
 
 @Config(value = ModConstants.MOD_ID)
 public class ModConfig implements BalmConfigData {

@@ -103,8 +103,8 @@ processResources {
         'minecraft_version_range'       : minecraft_version_range,
         'fabric_version'                : fabric_version,
         'fabric_loader_version'         : fabric_loader_version,
-        'forge_version'                 : forge_version,
-        'forge_loader_version_range'    : forge_loader_version_range,
+        'neoforge_version'              : neoforge_version,
+        'neoforge_loader_version_range' : neoforge_loader_version_range,
         'balm_version'                  : balm_version,
         'cloth_config_version'          : cloth_config_version,
         'yeetus_experimentus_version'   : yeetus_experimentus_version,
@@ -114,7 +114,7 @@ processResources {
         key, value -> [(key): value instanceof String ? value.replace("\n", "\\\\n") : value]
     }
 
-    filesMatching(['META-INF/mods.toml']) {
+    filesMatching(['META-INF/neoforge.mods.toml']) {
         expand expandProps
     }
 
