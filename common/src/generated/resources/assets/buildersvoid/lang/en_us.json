@@ -1,7 +1,7 @@
 {
-  "config.buildersvoid.cooldown": "Void Pearl Cooldown Length",
+  "config.buildersvoid.cooldown": "Cooldown Length",
   "config.buildersvoid.cooldown.tooltip": "Void Pearl usage cooldown length, in ticks",
-  "config.buildersvoid.enableCooldown": "Enable Void Pearl Cooldown",
+  "config.buildersvoid.enableCooldown": "Enable Cooldown",
   "config.buildersvoid.enableCooldown.tooltip": "Enables a cooldown when using any of the Void Pearl variants",
   "config.buildersvoid.title": "Builder's Void",
   "item.buildersvoid.linked_void_pearl": "Linked Void Pearl",

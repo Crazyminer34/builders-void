@@ -1,3 +1,10 @@
+### 20.1.0-alpha7
+_Admin powers_
+- Code refactoring
+- Tweak the translations for the configuration entries
+- Add the `/buildersvoid` root command and its `/bv` short variant.
+- Add the `teleport` command and its `tp` short variant.
+
 ### 20.1.0-alpha6
 _Buttons and levers_
 - Add Cloth Config as a dependency

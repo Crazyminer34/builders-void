@@ -2,6 +2,7 @@ package dev.detpikachu.buildersvoid.command;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
+import dev.detpikachu.buildersvoid.logic.TeleportLogic;
 import net.blay09.mods.balm.api.command.BalmCommands;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.Commands;
@@ -24,7 +25,7 @@ public class ModCommands {
             final var teleport = Commands.literal("teleport")
                 .requires(BalmCommands.requirePermission(PERM_TELEPORT))
                 .then(Commands.argument("target", EntityArgument.player())
-                    .executes(ModCommands::onTeleportTarget)
+                    .executes(ModCommands::onTeleportTargetPlayer)
                 )
                 .then(Commands.argument("source", EntityArgument.player())
                     .then(Commands.argument("target", EntityArgument.player())
@@ -38,21 +39,22 @@ public class ModCommands {
         });
     }
 
-    private static int onTeleportTarget(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
-        final EntitySelector target = context.getArgument("target", EntitySelector.class);
+    private static int onTeleportTargetPlayer(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        final var target = context.getArgument("target", EntitySelector.class);
+        final var sourcePlayer = context.getSource().getPlayer();
+        final var targetPlayer = target.findSinglePlayer(context.getSource());
 
-        context.getSource().sendSystemMessage(target.findSinglePlayer(context.getSource()).getName());
-
+        TeleportLogic.teleportIntoVoid(sourcePlayer, targetPlayer.getUUID(), false);
         return 0;
     }
 
-    private static int onTeleportSourceToTarget(CommandContext<CommandSourceStack> context) {
-        final EntitySelector source = context.getArgument("source", EntitySelector.class);
-        final EntitySelector target = context.getArgument("target", EntitySelector.class);
+    private static int onTeleportSourceToTarget(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {
+        final var source = context.getArgument("source", EntitySelector.class);
+        final var sourcePlayer = source.findSinglePlayer(context.getSource());
+        final var target = context.getArgument("target", EntitySelector.class);
+        final var targetPlayer = target.findSinglePlayer(context.getSource());
 
+        TeleportLogic.teleportIntoVoid(sourcePlayer, targetPlayer.getUUID(), false);
         return 0;
-    }
-
-    private static void teleportSourceToTarget() {
     }
 }
