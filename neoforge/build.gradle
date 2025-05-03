@@ -73,7 +73,7 @@ task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
     mainFile.changelog = rootProject.file("changelogs/${mod_version}.md").text
     mainFile.releaseType = release_type
     mainFile.addGameVersion(minecraft_version)
-    mainFile.addModLoader('Forge')
+    mainFile.addModLoader('NeoForge')
 
     mainFile.addRequirement('balm')
     mainFile.addRequirement('cloth-config')
@@ -85,11 +85,11 @@ modrinth {
 
     projectId = modrinth_project_id
     versionType = release_type
-    versionNumber = mod_version + '+forge-' + minecraft_version
+    versionNumber = mod_version + '+neoforge-' + minecraft_version
     changelog = rootProject.file("changelogs/${mod_version}.md").text
     uploadFile = jar
     gameVersions = [minecraft_version]
-    loaders = ['forge']
+    loaders = ['neoforge']
 
     dependencies {
         required.project 'balm'
