@@ -1,0 +1,13 @@
+{
+    "config.buildersvoid.cooldown": "Cooldown Length",
+    "config.buildersvoid.cooldown.tooltip": "Void Pearl usage cooldown length, in ticks",
+    "config.buildersvoid.enableCooldown": "Enable Cooldown",
+    "config.buildersvoid.enableCooldown.tooltip": "Enables a cooldown when using any of the Void Pearl variants",
+    "config.buildersvoid.title": "Builder's Void",
+    "item.buildersvoid.linked_void_pearl": "Linked Void Pearl",
+    "item.buildersvoid.void_pearl": "Void Pearl",
+    "itemGroup.buildersvoid.buildersvoid": "Builder's Void",
+    "tooltip.buildersvoid.linked_void_pearl.usage.bound": "§6Right-Click§r to teleport to and from §6%s§r's base in the Void dimension",
+    "tooltip.buildersvoid.linked_void_pearl.usage.unbound": "§6Shift + Right Click§r to bind this Linked Void Pearl to your Void base",
+    "tooltip.buildersvoid.void_pearl.usage": "§6Right-Click§r to teleport to and from §6your§r base the Void dimension"
+}

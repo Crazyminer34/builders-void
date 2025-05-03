@@ -1,3 +1,9 @@
+### 20.1.0-beta1
+_Feedback loop_
+- Promote version to beta
+- Add feedback to various actions
+- Moved translation out of datagen
+
 ### 20.1.0-alpha7
 _Admin powers_
 - Code refactoring
