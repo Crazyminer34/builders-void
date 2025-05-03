@@ -7,15 +7,12 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 
 public class ModLanguageProvider extends FabricLanguageProvider {
-
     public ModLanguageProvider(FabricDataOutput dataOutput) {
-
         super(dataOutput);
     }
 
     @Override
     public void generateTranslations(TranslationBuilder t) {
-
         t.add(ResourceKey.create(Registries.CREATIVE_MODE_TAB, ModItems.TAB.getIdentifier()), "Builder's Void");
         t.add(ModItems.VOID_PEARL, "Void Pearl");
         t.add(ModItems.LINKED_VOID_PEARL, "Linked Void Pearl");

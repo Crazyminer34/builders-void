@@ -15,13 +15,11 @@ import static dev.detpikachu.buildersvoid.ModConstants.id;
 public class ModRecipeProvider extends FabricRecipeProvider {
 
     public ModRecipeProvider(FabricDataOutput output) {
-
         super(output);
     }
 
     @Override
     public void buildRecipes(Consumer<FinishedRecipe> exporter) {
-
         ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.VOID_PEARL)
             .pattern(" d ")
             .pattern("dpd")

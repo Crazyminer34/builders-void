@@ -8,9 +8,7 @@ import net.minecraft.data.models.ItemModelGenerators;
 import net.minecraft.data.models.model.ModelTemplates;
 
 public class ModModelProvider extends FabricModelProvider {
-
     public ModModelProvider(FabricDataOutput output) {
-
         super(output);
     }
 
@@ -20,7 +18,6 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
-
         itemModelGenerators.generateFlatItem(ModItems.VOID_PEARL, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.LINKED_VOID_PEARL, ModelTemplates.FLAT_ITEM);
     }

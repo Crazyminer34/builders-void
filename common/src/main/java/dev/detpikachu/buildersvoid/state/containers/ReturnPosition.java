@@ -5,9 +5,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
 
 public record ReturnPosition(ResourceLocation dimension, Vec3 position) {
-
     public CompoundTag serialize() {
-
         CompoundTag tag = new CompoundTag();
         tag.putString("Dimension", dimension.toString());
 
@@ -21,7 +19,6 @@ public record ReturnPosition(ResourceLocation dimension, Vec3 position) {
     }
 
     public static ReturnPosition deserialize(CompoundTag tag) {
-
         String dimensionString = tag.getString("Dimension");
         ResourceLocation dimension = ResourceLocation.tryParse(dimensionString);
 

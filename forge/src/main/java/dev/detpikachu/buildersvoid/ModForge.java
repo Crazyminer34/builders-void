@@ -12,9 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 
 @Mod(ModConstants.MOD_ID)
 public class ModForge {
-
     public ModForge() {
-
         Balm.initialize(ModConstants.MOD_ID, ModCommon::initialize);
         DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> {
             BalmClient.initialize(ModConstants.MOD_ID, ModCommonClient::initialize);

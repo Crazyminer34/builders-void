@@ -9,7 +9,6 @@ import net.blay09.mods.balm.api.config.Config;
 
 @Config(value = ModConstants.MOD_ID)
 public class ModConfig implements BalmConfigData {
-
     @Comment("Enables a cooldown when using any of the Void Pearl variants")
     public boolean enableCooldown = true;
 
@@ -17,12 +16,10 @@ public class ModConfig implements BalmConfigData {
     public int cooldown = 100;
 
     public static void initialize(BalmConfig config) {
-
         config.registerConfig(ModConfig.class, ClientConfigMessage::new);
     }
 
     public static ModConfig getActive() {
-
         return Balm.getConfig().getActive(ModConfig.class);
     }
 }

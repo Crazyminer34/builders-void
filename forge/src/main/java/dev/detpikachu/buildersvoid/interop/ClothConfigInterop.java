@@ -12,9 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ClothConfigInterop {
-
     public static Screen getConfigScreen(Screen previousScreen) {
-
         var configName = Balm.getConfig().getConfigName(ModConfig.class);
         ConfigBuilder builder = ConfigBuilder.create()
             .setParentScreen(previousScreen)

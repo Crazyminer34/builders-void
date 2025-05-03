@@ -1,7 +1,6 @@
 package dev.detpikachu.buildersvoid.platform.services;
 
 public interface IPlatformHelper {
-
     /**
      * Gets the name of the current platform
      *
@@ -30,7 +29,6 @@ public interface IPlatformHelper {
      * @return The name of the environment type.
      */
     default String getEnvironmentName() {
-
         return isDevelopmentEnvironment() ? "development" : "production";
     }
 }

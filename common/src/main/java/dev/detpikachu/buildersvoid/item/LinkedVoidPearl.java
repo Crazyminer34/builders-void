@@ -13,17 +13,15 @@ import javax.annotation.Nullable;
 import java.util.List;
 
 public class LinkedVoidPearl extends VoidPearl {
-
     public LinkedVoidPearl(Properties properties) {
         super(properties);
     }
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltipComponents, TooltipFlag isAdvanced) {
-
         CompoundTag tag = stack.getTag();
-        if (tag == null || !tag.contains("UUID")) {
 
+        if (tag == null || !tag.contains("UUID")) {
             tooltipComponents.add(Component.translatable("tooltip.buildersvoid.linked_void_pearl.usage.unbound"));
             return;
         }
@@ -34,10 +32,9 @@ public class LinkedVoidPearl extends VoidPearl {
 
     @Override
     public boolean isFoil(ItemStack stack) {
-
         CompoundTag tag = stack.getTag();
-        if (tag == null) {
 
+        if (tag == null) {
             return false;
         }
 
@@ -46,21 +43,17 @@ public class LinkedVoidPearl extends VoidPearl {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand usedHand) {
-
         ItemStack itemStack = player.getItemInHand(usedHand);
         CompoundTag tag = itemStack.getTag();
 
         if (player.isCrouching()) {
             // If the player is crouching, we're attempting to bind the Linked Void Pearl to them
-
             if (level.isClientSide) {
-
                 return InteractionResultHolder.pass(itemStack);
             }
 
             if (tag != null && tag.contains("UUID")) {
                 // If it's already bound, do nothing
-
                 return InteractionResultHolder.pass(itemStack);
             }
 
@@ -76,7 +69,7 @@ public class LinkedVoidPearl extends VoidPearl {
         if (tag == null || !tag.contains("UUID")) {
             return InteractionResultHolder.pass(itemStack);
         }
-
+        
         return super.use(level, player, usedHand);
     }
 }
