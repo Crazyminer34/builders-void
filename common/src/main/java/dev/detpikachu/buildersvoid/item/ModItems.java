@@ -18,7 +18,7 @@ public class ModItems {
 
     public static void initialize(BalmItems items) {
         items.registerItem((identifier) -> VOID_PEARL = new VoidPearl(itemProperties(identifier)), id("void_pearl"));
-//        items.registerItem((identifier) -> LINKED_VOID_PEARL = new LinkedVoidPearl(itemProperties(identifier)), id("linked_void_pearl"));
+        items.registerItem((identifier) -> LINKED_VOID_PEARL = new LinkedVoidPearl(itemProperties(identifier)), id("linked_void_pearl"));
 
         TAB = items.registerCreativeModeTab(() -> new ItemStack(VOID_PEARL), id(ModConstants.MOD_ID));
     }

@@ -31,14 +31,14 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
             .save(recipeOutput, id("void_pearl"));
 
-//        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOID_PEARL)
-//            .pattern(" d ")
-//            .pattern("dpd")
-//            .pattern(" d ")
-//            .define('d', Items.PINK_DYE)
-//            .define('p', Items.ENDER_PEARL)
-//            .unlockedBy(getHasName(Items.PINK_DYE), has(Items.PINK_DYE))
-//            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
-//            .save(recipeOutput, id("linked_void_pearl"));
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOID_PEARL)
+            .pattern(" d ")
+            .pattern("dpd")
+            .pattern(" d ")
+            .define('d', Items.PINK_DYE)
+            .define('p', Items.ENDER_PEARL)
+            .unlockedBy(getHasName(Items.PINK_DYE), has(Items.PINK_DYE))
+            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+            .save(recipeOutput, id("linked_void_pearl"));
     }
 }
