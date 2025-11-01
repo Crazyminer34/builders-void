@@ -107,7 +107,6 @@ processResources {
         'neoforge_loader_version_range' : neoforge_loader_version_range,
         'balm_version'                  : balm_version,
         'cloth_config_version'          : cloth_config_version,
-        'yeetus_experimentus_version'   : yeetus_experimentus_version,
     ]
 
     var jsonExpandProps = expandProps.collectEntries {

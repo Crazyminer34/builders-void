@@ -10,7 +10,6 @@ dependencies {
 
     // Dependencies
     implementation "me.shedaniel.cloth:cloth-config-neoforge:${cloth_config_version}"
-    runtimeOnly "maven.modrinth:yeetus-experimentus:${yeetus_experimentus_version}-neoforge"
 
     // Dev dependencies
     runtimeOnly "mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}"
@@ -61,41 +60,3 @@ neoForge {
 }
 
 sourceSets.main.resources.srcDir 'src/generated/resources'
-
-task curseforge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge) {
-    dependsOn(build)
-    description = 'Publishes the Forge build to CurseForge'
-    group = 'publishing'
-
-    apiToken = findProperty('curseforge_token') ?: System.getenv('CURSEFORGE_TOKEN') ?: 'none'
-
-    def mainFile = upload(curseforge_project_id, file("${project.buildDir}/libs/${mod_id}-${project.name}-${mod_version}-${minecraft_version}.jar"))
-    mainFile.changelog = rootProject.file("changelogs/${mod_version}.md").text
-    mainFile.releaseType = release_type
-    mainFile.addGameVersion(minecraft_version)
-    mainFile.addModLoader('NeoForge')
-
-    mainFile.addRequirement('balm')
-    mainFile.addRequirement('cloth-config')
-    mainFile.addRequirement('yeetusexperimentus')
-}
-
-modrinth {
-    token = findProperty('modrinth_token') ?: System.getenv('MODRINTH_TOKEN') ?: 'none'
-
-    projectId = modrinth_project_id
-    versionType = release_type
-    versionNumber = mod_version + '+neoforge-' + minecraft_version
-    changelog = rootProject.file("changelogs/${mod_version}.md").text
-    uploadFile = jar
-    gameVersions = [minecraft_version]
-    loaders = ['neoforge']
-
-    dependencies {
-        required.project 'balm'
-        required.project 'cloth-config'
-        required.project 'yeetus-experimentus'
-    }
-}
-
-tasks.modrinth.dependsOn(build)
