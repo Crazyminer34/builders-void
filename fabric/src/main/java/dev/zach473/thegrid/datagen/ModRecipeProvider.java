@@ -21,24 +21,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
     @Override
     public void buildRecipes(RecipeOutput recipeOutput) {
-        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.VOID_PEARL)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.VOIDIUM)
             .pattern(" d ")
             .pattern("dpd")
             .pattern(" d ")
-            .define('d', Items.BLACK_DYE)
-            .define('p', Items.ENDER_PEARL)
-            .unlockedBy(getHasName(Items.BLACK_DYE), has(Items.BLACK_DYE))
-            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
-            .save(recipeOutput, id("void_pearl"));
+            .define('d', Items.PURPLE_DYE)
+            .define('p', Items.ENDER_EYE)
+            .unlockedBy(getHasName(Items.PURPLE_DYE), has(Items.BLACK_DYE))
+            .unlockedBy(getHasName(Items.ENDER_EYE), has(Items.ENDER_EYE))
+            .save(recipeOutput, id("voidium"));
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOID_PEARL)
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOIDIUM)
             .pattern(" d ")
-            .pattern("dpd")
+            .pattern("dvd")
             .pattern(" d ")
-            .define('d', Items.PINK_DYE)
-            .define('p', Items.ENDER_PEARL)
-            .unlockedBy(getHasName(Items.PINK_DYE), has(Items.PINK_DYE))
-            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
-            .save(recipeOutput, id("linked_void_pearl"));
+            .define('d', Items.GREEN_DYE)
+            .define('v', ModItems.VOIDIUM)
+            .unlockedBy(getHasName(Items.GREEN_DYE), has(Items.GREEN_DYE))
+            .unlockedBy(getHasName(ModItems.VOIDIUM), has(ModItems.VOIDIUM))
+            .save(recipeOutput, id("linked_voidium"));
     }
 }

@@ -26,11 +26,11 @@ public class LinkedVoidium extends Voidium {
         final var userIdentifier = stack.get(ModDataComponents.USER_IDENTIFIER);
 
         if (userIdentifier == null) {
-            tooltipComponents.add(Component.translatable("tooltip.thegrid.linked_void_pearl.usage.unbound"));
+            tooltipComponents.add(Component.translatable("tooltip.thegrid.linked_voidium.usage.unbound"));
             return;
         }
 
-        tooltipComponents.add(ComponentLogic.formatted("tooltip.thegrid.linked_void_pearl.usage.bound", userIdentifier.name()));
+        tooltipComponents.add(ComponentLogic.formatted("tooltip.thegrid.linked_voidium.usage.bound", userIdentifier.name()));
     }
 
     @Override
@@ -48,7 +48,7 @@ public class LinkedVoidium extends Voidium {
         if (player.isCrouching()) {
             // If it's already bound, do nothing
             if (userIdentifier != null) {
-                player.displayClientMessage(Component.translatable("message.thegrid.linked_void_pearl.already_bound"), true);
+                player.displayClientMessage(Component.translatable("message.thegrid.linked_voidium.already_bound"), true);
                 return InteractionResultHolder.pass(itemStack);
             }
 
@@ -57,13 +57,13 @@ public class LinkedVoidium extends Voidium {
                 itemStack.set(ModDataComponents.USER_IDENTIFIER, userIdentifier);
             }
 
-            player.displayClientMessage(Component.translatable("message.thegrid.linked_void_pearl.bound"), true);
+            player.displayClientMessage(Component.translatable("message.thegrid.linked_voidium.bound"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
         // Make sure the pearl is bound, otherwise do nothing
         if (userIdentifier == null) {
-            player.displayClientMessage(Component.translatable("message.thegrid.linked_void_pearl.unbound"), true);
+            player.displayClientMessage(Component.translatable("message.thegrid.linked_voidium.unbound"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
@@ -73,7 +73,7 @@ public class LinkedVoidium extends Voidium {
                 TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
             }
             addCooldown(player);
-            player.displayClientMessage(Component.translatable("message.thegrid.void_pearl.teleport_out"), true);
+            player.displayClientMessage(Component.translatable("message.thegrid.voidium.teleport_out"), true);
             return InteractionResultHolder.pass(itemStack);
         }
 
@@ -82,7 +82,7 @@ public class LinkedVoidium extends Voidium {
             TeleportLogic.teleportIntoVoid((ServerPlayer) player, userIdentifier.uuid(), false);
         }
         addCooldown(player);
-        player.displayClientMessage(ComponentLogic.formatted("message.thegrid.linked_void_pearl.teleport", userIdentifier.name()), true);
+        player.displayClientMessage(ComponentLogic.formatted("message.thegrid.linked_voidium.teleport", userIdentifier.name()), true);
         return InteractionResultHolder.pass(itemStack);
     }
 }

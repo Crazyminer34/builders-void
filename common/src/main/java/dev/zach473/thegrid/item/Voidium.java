@@ -15,8 +15,8 @@ import net.minecraft.world.level.Level;
 
 import java.util.List;
 
-public class VoidPearl extends Item {
-    public VoidPearl(Properties properties) {
+public class Voidium extends Item {
+    public Voidium(Properties properties) {
         super(properties
             .stacksTo(1)
             .fireResistant()
@@ -25,7 +25,7 @@ public class VoidPearl extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
-        tooltipComponents.add(Component.translatable("tooltip.thegrid.void_pearl.usage"));
+        tooltipComponents.add(Component.translatable("tooltip.thegrid.voidium.usage"));
     }
 
     @Override
@@ -36,7 +36,7 @@ public class VoidPearl extends Item {
                 TeleportLogic.teleportOutOfVoid((ServerPlayer) player);
             }
             addCooldown(player);
-            player.displayClientMessage(Component.translatable("message.thegrid.void_pearl.teleport_out"), true);
+            player.displayClientMessage(Component.translatable("message.thegrid.voidium.teleport_out"), true);
             return InteractionResultHolder.pass(player.getItemInHand(usedHand));
         }
 
@@ -45,7 +45,7 @@ public class VoidPearl extends Item {
             TeleportLogic.teleportIntoVoid((ServerPlayer) player, player.getUUID(), true);
         }
         addCooldown(player);
-        player.displayClientMessage(Component.translatable("message.thegrid.void_pearl.teleport_in"), true);
+        player.displayClientMessage(Component.translatable("message.thegrid.voidium.teleport_in"), true);
         return InteractionResultHolder.pass(player.getItemInHand(usedHand));
     }
 
