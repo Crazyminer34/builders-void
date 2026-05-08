@@ -1,4 +1,4 @@
-# Builder's Void
+# The Grid
 
 This is a simple mod that adds a void dimension for restriction-free building of lawn bases.
 
@@ -7,8 +7,8 @@ This is a simple mod that adds a void dimension for restriction-free building of
 
 ## Features
 - Adds an empty void dimension perfect for building large bases and factories.
-- Adds a "Void Pearl" to teleport to and from said dimension.
-- Adds a "Linked Void Pearl" that can be bound to a player's base in the void dimension and subsequently used by others to teleport there.
+- Adds a "Voidium" to teleport to and from said dimension.
+- Adds a "Linked Voidium" that can be bound to a player's base in the void dimension and subsequently used by others to teleport there.
 - A 3x3 Obsidian platform is generated at the void dimension teleport location if there's no solid ground present.
 - Each player is allocated a unique position in the void dimension to allow for independent bases to be created.
 - Record the player's current dimension and position when teleporting to the void and return them there when teleporting back.
@@ -27,11 +27,11 @@ The mod adds a few commands to assist in debugging and administration. You can s
 For the commands above, there exist short versions, listed below.
 
 ```
-/thegrid    ->    /bv
+/thegrid    ->    /tg
  teleport        ->     tp
 ```
 
-This is to say, instead of, for example, writing `/thegrid teleport <target>`, you can write `/bv tp <target>`.
+This is to say, instead of, for example, writing `/thegrid teleport <target>`, you can write `/tg tp <target>`.
 
 ## Credits
 _In alphabetical order_
@@ -45,10 +45,10 @@ _In alphabetical order_
 - [jaredlll08 for MultiLoader-Template](https://github.com/jaredlll08/MultiLoader-Template)
 - [McJty for RFTools Dimensions](https://github.com/McJtyMods/RFToolsDimensions)
 - [shedaniel for Cloth Config](https://github.com/shedaniel/cloth-config)
-- [Sunekaer for Yeetus Experimentus](https://github.com/nanite/Yeetus-Experimentus)
+- [Malcolmriley for Textures](https://github.com/malcolmriley/unused-textures)
 
 ## License
-Copyright (C) 2025 Andrei I. Hava
+Copyright (C) 2025 Zachary R. Zink
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
