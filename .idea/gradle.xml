@@ -7,9 +7,9 @@
         <compositeConfiguration>
           <compositeBuild compositeDefinitionSource="SCRIPT">
             <builds>
-              <build path="$PROJECT_DIR$/buildSrc" name="buildSrc">
+              <build path="$USER_HOME$/Documents/Github/builders-void/buildSrc" name="buildSrc">
                 <projects>
-                  <project path="$PROJECT_DIR$/buildSrc" />
+                  <project path="$USER_HOME$/Documents/Github/builders-void/buildSrc" />
                 </projects>
               </build>
             </builds>
@@ -19,11 +19,11 @@
         <option name="gradleJvm" value="temurin-21" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/common" />
-            <option value="$PROJECT_DIR$/fabric" />
-            <option value="$PROJECT_DIR$/neoforge" />
+            <option value="$USER_HOME$/Documents/Github/builders-void" />
+            <option value="$USER_HOME$/Documents/Github/builders-void/buildSrc" />
+            <option value="$USER_HOME$/Documents/Github/builders-void/common" />
+            <option value="$USER_HOME$/Documents/Github/builders-void/fabric" />
+            <option value="$USER_HOME$/Documents/Github/builders-void/neoforge" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="true" />

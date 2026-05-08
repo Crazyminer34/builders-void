@@ -1,0 +1,44 @@
+package dev.zach473.thegrid.datagen;
+
+import dev.zach473.thegrid.item.ModItems;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
+import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
+
+import java.util.concurrent.CompletableFuture;
+
+import static dev.zach473.thegrid.ModConstants.id;
+
+public class ModRecipeProvider extends FabricRecipeProvider {
+
+    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> provider) {
+        super(output, provider);
+    }
+
+    @Override
+    public void buildRecipes(RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.VOID_PEARL)
+            .pattern(" d ")
+            .pattern("dpd")
+            .pattern(" d ")
+            .define('d', Items.BLACK_DYE)
+            .define('p', Items.ENDER_PEARL)
+            .unlockedBy(getHasName(Items.BLACK_DYE), has(Items.BLACK_DYE))
+            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+            .save(recipeOutput, id("void_pearl"));
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TRANSPORTATION, ModItems.LINKED_VOID_PEARL)
+            .pattern(" d ")
+            .pattern("dpd")
+            .pattern(" d ")
+            .define('d', Items.PINK_DYE)
+            .define('p', Items.ENDER_PEARL)
+            .unlockedBy(getHasName(Items.PINK_DYE), has(Items.PINK_DYE))
+            .unlockedBy(getHasName(Items.ENDER_PEARL), has(Items.ENDER_PEARL))
+            .save(recipeOutput, id("linked_void_pearl"));
+    }
+}

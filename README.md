@@ -20,23 +20,23 @@ This is a simple mod that adds a void dimension for restriction-free building of
 The mod adds a few commands to assist in debugging and administration. You can see them listed below.
 
 ```
-/buildersvoid teleport <target>             Teleport to target's base in the void, if it exists.
-/buildersvoid teleport <source> <target>    Teleport source to target's base in the void, if it exists.
+/thegrid teleport <target>             Teleport to target's base in the void, if it exists.
+/thegrid teleport <source> <target>    Teleport source to target's base in the void, if it exists.
 ```
 
 For the commands above, there exist short versions, listed below.
 
 ```
-/buildersvoid    ->    /bv
+/thegrid    ->    /bv
  teleport        ->     tp
 ```
 
-This is to say, instead of, for example, writing `/buildersvoid teleport <target>`, you can write `/bv tp <target>`.
+This is to say, instead of, for example, writing `/thegrid teleport <target>`, you can write `/bv tp <target>`.
 
 ## Credits
 _In alphabetical order_
 
-- detpikachu
+- zach473
 
 ## Acknowledgements
 _In alphabetical order_

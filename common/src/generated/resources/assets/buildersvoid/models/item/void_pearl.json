@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "buildersvoid:item/void_pearl"
+    "layer0": "thegrid:item/void_pearl"
   }
 }

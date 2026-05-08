@@ -2,10 +2,18 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/builders-void.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fabric/builders-void.fabric.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-176620606/Github.builders-void.common.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-176620606/Github.builders-void.common.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-471934746/Github.builders-void.neoforge.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-471934746/Github.builders-void.neoforge.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.main.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.test.iml" filepath="$PROJECT_DIR$/.idea/modules/buildSrc/builders-void.buildSrc.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/builders-void.common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/builders-void.common.generated.iml" filepath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.generated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/builders-void.common.test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/builders-void.common.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-103985540/builders-void.fabric.main.iml" filepath="$PROJECT_DIR$/.idea/modules/-103985540/builders-void.fabric.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-103985540/builders-void.fabric.test.iml" filepath="$PROJECT_DIR$/.idea/modules/-103985540/builders-void.fabric.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.test.iml" filepath="$PROJECT_DIR$/.idea/modules/neoforge/builders-void.neoforge.test.iml" />
     </modules>
   </component>
 </project>

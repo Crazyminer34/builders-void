@@ -1,8 +1,8 @@
 .cache
 .gradle
+.idea
 build
 run
 runs
 runserver
 logs
-.idea
