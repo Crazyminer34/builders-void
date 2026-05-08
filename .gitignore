@@ -1,6 +1,5 @@
 .cache
 .gradle
-.idea
 build
 run
 runs
